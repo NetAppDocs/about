@@ -1,0 +1,47 @@
+---
+sidebar: sidebar
+permalink: netapp-docbot.html
+keywords: 
+summary: "The NetApp Docbot (Doc) is an AI-powered assistant that provides answers to your questions about NetApp products. Doc can only answer questions about NetApp products. For example, Doc can answer questions about NetApp storage efficiency features or AI solutions or backup and recovery best practices for multi-cloud environments."
+---
+= About the NetApp Docbot
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The NetApp Docbot ("Doc") is an AI-powered assistant that provides answers to your questions about NetApp products. Doc can only answer questions about NetApp products. For example, Doc can answer questions about NetApp storage efficiency features or AI solutions or backup and recovery best practices for multi-cloud environments.  
+
+== Capabilities 
+
+* Doc has good manners and doesn't engage in inappropriate conversations. 
+* Doc is not an elephant but has quite a memory. Doc remembers and pays attention to what you're discussing. 
+* Doc is consultative. Doc offers suggestions for questions you might want to ask in addition to those you've asked. 
+* Doc is an avid reader. Doc answers your questions and provides links to related documentation.  
+* Doc keeps up with current events. Whenever our docs get published (and that happens a lot), Doc reads them. It's amazing how fast Doc learns. 
+
+== Limitations 
+
+* Doc is a world traveler. Doc grew up speaking English but has learned several other languages recently. Doc is attending language school and will get better over time. (Did we mention that Doc is a fast learner?) 
+
+== Tips 
+
+* Doc loves specific questions. 
++
+Doc provides better answers when you explicitly cite a product name, interface (for example, GUI or API), and version. For example: What steps should I follow in System Manager to upgrade from ONTAP 9.8 to ONTAP 9.12.1? 
+* Need to learn how to do something? 
++
+Consider asking Doc to include the steps. Instead of asking Doc "How do I install the BlueXP Connector without internet?" try asking "What steps should I follow to install the BlueXP Connector without internet?" 
+* Ask simple questions. 
++
+If you need to ask a complex question, break it up into smaller questions (this is sometimes referred to as chaining questions). During a chat session, Doc pays attention and remembers the questions you ask. Instead of asking Doc "How do I configure ransomware protection and backup schedules in BlueXP?" try "What are the steps to configure ransomware protection in BlueXP?" and "What are the steps to configure backup schedules in BlueXP?" 
+* Use quotation marks to clarify when you want Doc to pay attention to multi-word phrases that Doc could misinterpret. 
++
+For example, if you ask Doc "How is storage efficiency calculated in ONTAP?" it's possible Doc could think you're asking about storage and efficiency as two unrelated words. To make sure Doc understands that you're asking about (the concept called) storage efficiency, wrap that phrase inside quotes like so: How is "storage efficiency" calculated in ONTAP? If you were having a conversation with a human, you would likely stress the phrase, possibly use air quotes, or gesture in some way that makes the distinction obvious. Think of the double-quotes as a gesture that helps Doc understand what you're talking about. 
+* Get curious. 
++
+Try different patterns and approaches to asking questions. If you don't get the result you want, try to rephrase your question.  

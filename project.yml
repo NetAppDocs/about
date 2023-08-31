@@ -8,5 +8,7 @@ settings:
 
 sidebar: 
   entries:
+  - title: About the NetApp Docbot
+    url: /netapp-docbot.html
   - title: Legal notices
     url: /legal-notices.html
