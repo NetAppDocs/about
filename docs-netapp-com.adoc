@@ -1,0 +1,28 @@
+---
+sidebar: sidebar
+permalink: docs-netapp-com.html
+keywords: 
+summary: 
+---
+= About docs.netapp.com sites
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+
+// Two changes below, ID and title
+video::id-goes-here[panopto, title="Title goes here"]
+
+
+.Transcript
+[%collapsible%]
+====
+
+====
+
+
