@@ -2,10 +2,10 @@
 layout: landing-page
 sidebar: sidebar
 permalink: index.html
-# lead: Use only if indexpage.lead is not present in _index.yml
-summary: "summary, used for search results"
+# lead: ""
+# summary: ""
 ---
-= replace with repository name
+= About docs.netapp.com
 :hardbreaks:
 :nofooter:
 :icons: font
