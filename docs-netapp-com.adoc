@@ -16,12 +16,41 @@ summary:
 [.lead]
 
 // Two changes below, ID and title
-video::id-goes-here[panopto, title="Title goes here"]
+video::id-goes-here[panopto, title="Site tour"]
 
 
 .Transcript
 [%collapsible%]
 ====
+&#91;0:01&#93; Hi there. This is Ben from the docs.netapp.com team. In this video, we'll look at the features and functions available on docs.netapp.com to help you get the most out of your content viewing experience. 
+
+&#91;0:12&#93; Let's start with finding the content you're looking for. Once you've entered a doc site, you can use the left side of the site to navigate. 
+
+&#91;0:20&#93; If multiple versions of the documentation are available, you can select the docs for the version of the product that you are using. 
+
+&#91;0:28&#93; Use the search box to find content within a doc site. For example, I want to learn how volume encryption works. 
+
+&#91;0:36&#93; If you prefer to browse the docs, you can use the table of contents, which is organized into logical groupings like getting started and using the product. 
+
+&#91;0:45&#93; If you want to go to another doc site, you can use the breadcrumbs to navigate around docs.netapp.com.
+
+&#91;0:50&#93; Once you've found the content that you are looking for, a few key features are available to help you interact with the content. 
+
+&#91;0:57&#93; docs.netapp.com is available in several different languages so that you can read the docs in your native language. 
+
+&#91;1:05&#93; If a page has multiple sections, you can use the "On this page" links to go directly to the content that you are looking for. The links also identify where you are on the page, which can help you follow along as you scroll.
+
+&#91;1:20&#93; To focus just on the content itself, you can collapse the left and right sidebars. When you're done, expand them to view the navigation controls again. 
+
+&#91;1:33&#93; If you need to read the docs offline, you can download a PDF of the entire doc site or of individual sections within the site. 
+
+&#91;1:42&#93; docs.netapp.com is open source and designed to allow community contributions. Submit your feedback to request a documentation update or directly edit the content yourself, which is submitted to a NetApp content lead before merging. 
+
+&#91;1:59&#93; On the doc sites for some of our cloud services, you might see a cloud provider option that enables you to filter the docs to a specific cloud provider. For example, if you select Microsoft Azure you'll only see content that applies to Azure. Content for other cloud providers won't appear. 
+
+&#91;2:18&#93; Because you might access our content from a tablet, mobile device, or desktop, we use a responsive layout to ensure that our docs look good on any device. 
+
+&#91;2:28&#93; And that's it. We hope you enjoy using these features and thank you for being a part of our content community.
 
 ====
 
