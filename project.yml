@@ -1,3 +1,4 @@
+jekyll: srd23-stable-12
 settings:
   name: "About docs.netapp.com"
   internal:
@@ -8,6 +9,8 @@ settings:
 
 sidebar: 
   entries:
+  - title: About the sites
+    url: /docs-netapp-com.html
   - title: About the NetApp Docbot
     url: /netapp-docbot.html
   - title: Legal notices
