@@ -4,44 +4,45 @@ permalink: netapp-docbot.html
 keywords: 
 summary: "The NetApp Docbot (Doc) is an AI-powered assistant that provides answers to your questions about NetApp products. Doc can only answer questions about NetApp products. For example, Doc can answer questions about NetApp storage efficiency features or AI solutions or backup and recovery best practices for multi-cloud environments."
 ---
-= About the NetApp Docbot
-:toc: macro
+= NetApp Docbot Terms of Use
 :hardbreaks:
-:toclevels: 1
-:nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
 
 [.lead]
-The NetApp Docbot ("Doc") is an AI-powered assistant that provides answers to your questions about NetApp products. Doc can only answer questions about NetApp products. For example, Doc can answer questions about NetApp storage efficiency features or AI solutions or backup and recovery best practices for multi-cloud environments.  
+The NetApp Docbot ("Doc") is a generative AI-powered assistant designed to respond to questions about NetApp products. For example, Doc can respond to questions about NetApp storage efficiency features or AI solutions or backup and recovery best practices for multi-cloud environments.
 
-== Capabilities 
+Unlike public search engines or generative chatbots trained on broad swaths of content on the internet, you should not use Doc to get quiche recipes or recommendations for the best walking route between Dubuque and Des Moines. You should not attempt to use Doc to get answers to questions that are not about NetApp products. By using the NetApp Docbot, you agree to abide by the following rules and stipulations when generating content and responses.
 
-* Doc has good manners and doesn't engage in inappropriate conversations. 
-* Doc is not an elephant but has quite a memory. Doc remembers and pays attention to what you're discussing. 
-* Doc is consultative. Doc offers suggestions for questions you might want to ask in addition to those you've asked. 
-* Doc is an avid reader. Doc answers your questions and provides links to related documentation.  
-* Doc keeps up with current events. Whenever our docs get published (and that happens a lot), Doc reads them. It's amazing how fast Doc learns. 
+NOTE: This Beta version of the NetApp Docbot creates algorithmically-generated content that might contain errors or inaccuracies. All Docbot generated content should be used as a starting point only. You should always verify Docbot's responses by referring to NetApp's official product documentation. Any reliance on Doc's generated responses is at your own risk, and NetApp is not responsible for any issues or difficulties that may occur by solely using Doc's generated responses. Failure to abide by the following terms may result in being blocked from using the NetApp Docbot.
 
-== Limitations 
+== Capabilities
+* Doc has good manners and doesn't engage in inappropriate conversations. Do not try and engage Doc in conversations that are outside the scope of its intended purpose.
+* Doc is not an elephant but has quite a memory. Most of the time, Doc remembers and pays attention to what you're discussing. If Doc loses track of a conversation, you can start a new one in the same chat session.
+* Doc is an avid reader. Whenever our docs get published on docs.netapp.com (and that happens a lot), Doc reads and will be able to reference them to generate its responses. It's amazing how fast Doc learns.
+* Doc is consultative. Doc offers suggestions for questions you might want to ask in addition to those you've asked.
+* Doc shares insights into how it generates its responses, giving you the opportunity to rephrase your questions.
 
-* Doc is a world traveler. Doc grew up speaking English but has learned several other languages recently. Doc is attending language school and will get better over time. (Did we mention that Doc is a fast learner?) 
+== Limitations
+* Doc is a world traveler and understands many languages. Though Doc can provide responses in other languages, Doc hasn't read the non-English versions of NetApp product docs. To ensure you have the most accurate information possible, always verify Docbot's responses in English.
 
-== Tips 
-
+== Tips
 * Doc loves specific questions. 
 +
-Doc provides better answers when you explicitly cite a product name, interface (for example, GUI or API), and version. For example: What steps should I follow in System Manager to upgrade from ONTAP 9.8 to ONTAP 9.12.1? 
+Doc provides better responses when you explicitly cite a product name, interface (for example, GUI or API), and version. For example: What steps should I follow in System Manager to upgrade from ONTAP 9.8 to ONTAP 9.12.1?
 * Need to learn how to do something? 
 +
-Consider asking Doc to include the steps. Instead of asking Doc "How do I install the BlueXP Connector without internet?" try asking "What steps should I follow to install the BlueXP Connector without internet?" 
+Consider asking Doc to include the steps. Instead of asking Doc "How do I install the BlueXP Connector without internet?" try asking "What steps should I follow to install the BlueXP Connector without internet?"
 * Ask simple questions. 
 +
-If you need to ask a complex question, break it up into smaller questions (this is sometimes referred to as chaining questions). During a chat session, Doc pays attention and remembers the questions you ask. Instead of asking Doc "How do I configure ransomware protection and backup schedules in BlueXP?" try "What are the steps to configure ransomware protection in BlueXP?" and "What are the steps to configure backup schedules in BlueXP?" 
+If you need to ask a complex question, break it into smaller questions (this is sometimes referred to as chaining questions). During a chat session, Doc pays attention and remembers the questions you ask. Instead of asking Doc "How do I configure ransomware protection and backup schedules in BlueXP?" try "What are the steps to configure ransomware protection in BlueXP?" and "What are the steps to configure backup schedules in BlueXP?"
 * Use quotation marks to clarify when you want Doc to pay attention to multi-word phrases that Doc could misinterpret. 
 +
-For example, if you ask Doc "How is storage efficiency calculated in ONTAP?" it's possible Doc could think you're asking about storage and efficiency as two unrelated words. To make sure Doc understands that you're asking about (the concept called) storage efficiency, wrap that phrase inside quotes like so: How is "storage efficiency" calculated in ONTAP? If you were having a conversation with a human, you would likely stress the phrase, possibly use air quotes, or gesture in some way that makes the distinction obvious. Think of the double-quotes as a gesture that helps Doc understand what you're talking about. 
-* Get curious. 
+For example, if you ask Doc "How is storage efficiency calculated in ONTAP?" it's possible Doc could think you're asking about storage and efficiency as two unrelated words. To make sure Doc understands that you're asking about (the concept called) storage efficiency, wrap that phrase inside quotes like so: How is "storage efficiency" calculated in ONTAP? If you were having a conversation with a human, you would likely stress the phrase, possibly use air quotes, or gesture in some way that makes the distinction obvious. Think of the double-quotes as a gesture that helps Doc understand what you're talking about.
+* After responding, Doc provides insights into how it generated its response. Get curious. 
 +
-Try different patterns and approaches to asking questions. If you don't get the result you want, try to rephrase your question.  
+Try different patterns and approaches to asking questions. If you don't get the result you want, try rephrasing your question.
+
+== Feedback
+We are working to continually improve Docbot. Please link:mailto:ng-doccoments@netapp.com[contact us] if you have any questions or concerns regarding Docbot's capabilities or responses.
