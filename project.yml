@@ -1,4 +1,4 @@
-jekyll: docabout-centralization
+jekyll: staging
 settings:
   name: "About docs.netapp.com"
   internal:
