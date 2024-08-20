@@ -1,0 +1,65 @@
+---
+sidebar: sidebar
+permalink: doc-gen-ai-assistant.html
+keywords: 
+summary: "Doc is our generative AI-powered assistant on docs.netapp.com. Doc is designed to respond to questions about NetApp products. For example, Doc can respond to questions about NetApp storage efficiency features or backup and recovery best practices for multi-cloud environments."
+---
+= NetApp Generative AI Assistant Terms of Use
+:hardbreaks:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Doc is our generative AI-powered assistant on docs.netapp.com. Doc is designed to respond to questions about NetApp products. For example, Doc can respond to questions about NetApp storage efficiency features or backup and recovery best practices for multi-cloud environments.
+
+This Beta version of Doc creates algorithmically-generated content that might contain errors or inaccuracies. All generated content should be used as a starting point only. You should always verify Doc's responses by referring to NetApp's official product documentation. Any reliance on Doc's generated responses is at your own risk, and NetApp is not responsible for any issues or difficulties that may occur by solely using Doc's generated responses.
+
+== Conditions
+By using Doc, you agree to abide by the following rules and stipulations when generating content and responses. Failure to abide by these terms may result in being blocked from using Doc.
+
+* Do not attempt to use Doc to produce content that might cause harm, abuse, violence, or deception.
+* Do not try to engage Doc in conversations that are outside the scope of its intended purpose or to get answers to questions that are not about NetApp products.
+
+== Capabilities
+* Doc is not an elephant but has quite a memory. 
++
+Most of the time, Doc remembers and pays attention to what you're discussing. If Doc loses track of a conversation, you can start a new one in the same chat session.
+* Doc is an avid reader. 
++
+Whenever our docs get published on docs.netapp.com (and that happens a lot), Doc reads and will be able to reference them to generate its responses. It's amazing how fast Doc learns.
+* Doc is consultative. 
++
+Doc offers suggestions for questions you might want to ask in addition to those you've asked.
+* Doc is communicative.
++
+Doc shares insights into how it generates its responses, giving you the opportunity to rephrase your questions.
+
+== Limitations
+* If a NetApp product has multiple versions of documentation, Doc only refers to the latest version to help generate answers.
+* During Beta, Doc does not refer to all documentation for all NetApp products. Doc only refers to a subset of documentation, including but not limited to ONTAP and BlueXP docs to help generate answers.
+* Though Doc can provide responses in other languages, Doc hasn't read the non-English versions of NetApp product docs. To ensure you have the most accurate information possible, always verify Doc's responses in English.
+
+== Tips
+* Doc loves specific questions. 
++
+Doc provides better responses when you explicitly cite a product name, interface (for example, GUI or API), and version. For example: _What steps should I follow in System Manager to upgrade from ONTAP 9.8 to ONTAP 9.12.1?_
+* Need to learn how to do something? 
++
+Consider asking Doc to include the steps. Instead of asking Doc _How do I install the BlueXP Connector without internet?_ try asking _What steps should I follow to install the BlueXP Connector without internet?_
+* Ask simple questions. 
++
+If you need to ask a complex question, break it into smaller questions (this is sometimes referred to as chaining questions). During a chat session, Doc pays attention and remembers the questions you ask. 
++
+Instead of asking Doc _How do I configure ransomware protection and backup schedules in BlueXP?_ try _What are the steps to configure ransomware protection in BlueXP?_ and _What are the steps to configure backup schedules in BlueXP?_
+* Use quotation marks to clarify when you want Doc to pay attention to multi-word phrases that Doc could misinterpret. 
++
+For example, if you ask Doc _How is storage efficiency calculated in ONTAP?_ it's possible Doc could think you're asking about storage and efficiency as two unrelated words. To make sure Doc understands that you're asking about (the concept called) storage efficiency, wrap that phrase inside quotes like so: _How is "storage efficiency" calculated in ONTAP?_
++
+If you were having a conversation with a human, you would likely stress the phrase, possibly use air quotes, or gesture in some way that makes the distinction obvious. Think of the double-quotes as a gesture that helps Doc understand what you're talking about.
+* After responding, Doc provides insights into how it generated its response. Get curious. 
++
+Try different patterns and approaches to asking questions. If you don't get the result you want, try rephrasing your question.
+
+== Feedback
+We are working to continually improve Doc. Please send us feedback inside Doc's chat window. Let us know if Doc's answers are accurate and helpful or if they're incomplete or in any way insufficient. You can also mailto:ng-doccoments@netapp.com[contact us] if you have any questions or concerns regarding Doc's capabilities or responses.

@@ -5,7 +5,6 @@ keywords:
 summary: 
 ---
 = About docs.netapp.com sites
-:toc: macro
 :hardbreaks:
 :toclevels: 1
 :nofooter:
