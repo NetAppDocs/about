@@ -1,0 +1,25 @@
+---
+sidebar: sidebar
+permalink: doc-gen-ai-assistant-terms-of-use.html
+keywords: 
+summary: "Doc is our generative AI-powered assistant on docs.netapp.com. Doc is designed to respond to questions about NetApp products, using content published on docs.netapp.com. For example, Doc can respond to questions about NetApp storage efficiency features or backup and recovery best practices for multi-cloud environments."
+---
+= NetApp generative AI assistant terms of use
+:hardbreaks:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Doc is our generative AI-powered assistant on docs.netapp.com. Doc is designed to respond to questions about NetApp products, using content published on docs.netapp.com. For example, Doc can respond to questions about NetApp storage efficiency features or backup and recovery best practices for multi-cloud environments.
+
+This Beta version of Doc creates algorithmically-generated content that might contain errors or inaccuracies. All generated content should be used as a starting point only. You should always verify Doc's responses by referring to NetApp's official product documentation. Any reliance on Doc's generated responses is at your own risk, and NetApp is not responsible for any issues or difficulties that may occur by solely using Doc's generated responses.
+
+== Conditions
+By using Doc, you agree to abide by the following rules and stipulations when generating content and responses. Failure to abide by these terms may result in being blocked from using Doc.
+
+* Do not attempt to use Doc to produce content that might cause harm, abuse, violence, or deception.
+* •	Do not try to engage Doc in conversations that are outside the scope of its intended purpose or to get answers to questions that are not about NetApp products.
+
+== Feedback
+We are working to continually improve Doc. Please send us feedback inside Doc's chat window. Let us know if Doc's answers are accurate and helpful or if they're incomplete or in any way insufficient. You can also mailto:ng-doccoments@netapp.com[contact us] if you have any questions or concerns regarding Doc's capabilities or responses.
