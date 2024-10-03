@@ -13,9 +13,9 @@ sidebar:
     url: /docs-netapp-com.html
   - title: About Doc (AI-powered assistant)
     entries:
-      - title: About NetApp generative AI assistant  
+      - title: Capabilities & limitations  
         url: /about-doc-gen-ai-assistant.html
-      - title: NetApp generative AI assistant terms of use
+      - title: Terms of use
         url: /doc-gen-ai-assistant-terms-of-use.html   
   - title: Legal notices
     url: /legal-notices.html

@@ -2,16 +2,16 @@
 sidebar: sidebar
 permalink: about-doc-gen-ai-assistant.html
 keywords: 
-summary: "Doc is our generative AI-powered assistant. Doc responds to questions about NetApp products using content published on docs.netapp.com. For more details, see the limitations outlined below."
+summary: "The NetApp generative AI-powered assistant, "Doc," is available on docs.netapp.com. Doc responds to questions about NetApp products using only the content published on this site. Doc does not use content from other NetApp sites or the public internet to answer questions."
 ---
-= About NetApp generative AI assistant
+= NetApp generative AI-powered assistant overview
 :hardbreaks:
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
 
 [.lead]
-Doc is our generative AI-powered assistant. Doc responds to questions about NetApp products using content published on docs.netapp.com. For more details, see the limitations outlined below.
+The NetApp generative AI-powered assistant, "Doc," is available on docs.netapp.com. Doc responds to questions about NetApp products using only the content published on this site. Doc does not use content from other NetApp sites or the public internet to answer questions.
 
 == Capabilities
 * Doc is not an elephant but has quite a memory. 

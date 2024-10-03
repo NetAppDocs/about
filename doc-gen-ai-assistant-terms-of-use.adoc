@@ -4,7 +4,7 @@ permalink: doc-gen-ai-assistant-terms-of-use.html
 keywords: 
 summary: "Doc is our generative AI-powered assistant on docs.netapp.com. Doc is designed to respond to questions about NetApp products, using content published on docs.netapp.com. For example, Doc can respond to questions about NetApp storage efficiency features or backup and recovery best practices for multi-cloud environments."
 ---
-= NetApp generative AI assistant terms of use
+= NetApp generative AI-powered assistant terms of use
 :hardbreaks:
 :icons: font
 :linkattrs:
