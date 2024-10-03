@@ -13,7 +13,7 @@ sidebar:
     url: /docs-netapp-com.html
   - title: About Doc (AI-powered assistant)
     entries:
-      - title: Capabilities & limitations  
+      - title: Capabilities & limitations
         url: /about-doc-gen-ai-assistant.html
       - title: Terms of use
         url: /doc-gen-ai-assistant-terms-of-use.html   
