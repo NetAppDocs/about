@@ -1,25 +1,17 @@
 ---
 sidebar: sidebar
-permalink: doc-gen-ai-assistant.html
-keywords: 
-summary: "Doc is our generative AI-powered assistant on docs.netapp.com. Doc is designed to respond to questions about NetApp products. For example, Doc can respond to questions about NetApp storage efficiency features or backup and recovery best practices for multi-cloud environments."
+permalink: about-doc-gen-ai-assistant.html
+keywords: netapp, generative ai, doc
+summary: "The NetApp generative AI-powered assistant Doc is available on docs.netapp.com. Doc responds to questions about NetApp products using only the content published on this site. Doc does not use content from other NetApp sites or the public internet to answer questions."
 ---
-= NetApp Generative AI Assistant Terms of Use
+= NetApp generative AI-powered assistant overview
 :hardbreaks:
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
 
 [.lead]
-Doc is our generative AI-powered assistant on docs.netapp.com. Doc is designed to respond to questions about NetApp products. For example, Doc can respond to questions about NetApp storage efficiency features or backup and recovery best practices for multi-cloud environments.
-
-This Beta version of Doc creates algorithmically-generated content that might contain errors or inaccuracies. All generated content should be used as a starting point only. You should always verify Doc's responses by referring to NetApp's official product documentation. Any reliance on Doc's generated responses is at your own risk, and NetApp is not responsible for any issues or difficulties that may occur by solely using Doc's generated responses.
-
-== Conditions
-By using Doc, you agree to abide by the following rules and stipulations when generating content and responses. Failure to abide by these terms may result in being blocked from using Doc.
-
-* Do not attempt to use Doc to produce content that might cause harm, abuse, violence, or deception.
-* Do not try to engage Doc in conversations that are outside the scope of its intended purpose or to get answers to questions that are not about NetApp products.
+The NetApp generative AI-powered assistant, "Doc," is available on docs.netapp.com. Doc responds to questions about NetApp products using only the content published on this site. Doc does not use content from other NetApp sites or the public internet to answer questions.
 
 == Capabilities
 * Doc is not an elephant but has quite a memory. 
@@ -36,8 +28,10 @@ Doc offers suggestions for questions you might want to ask in addition to those 
 Doc shares insights into how it generates its responses, giving you the opportunity to rephrase your questions.
 
 == Limitations
+* Doc only uses content published on docs.netapp.com to generate answers. Doc does not generate answers from content published on other NetApp web sites.
+* During Beta, Doc does not refer to all documentation for all NetApp products. Doc only refers to a subset of documentation, including but not limited to ONTAP, BlueXP, StorageGRID, Keystone, and SnapCenter docs to help generate answers. If you’re looking for information that Doc doesn’t know about, mailto:ng-doccoments@netapp.com[let us know].
 * If a NetApp product has multiple versions of documentation, Doc only refers to the latest version to help generate answers.
-* During Beta, Doc does not refer to all documentation for all NetApp products. Doc only refers to a subset of documentation, including but not limited to ONTAP and BlueXP docs to help generate answers.
+* Doc does not refer to the page you're on to make assumptions about the product you're interested in. Be as specific as possible with your questions, mentioning product names and versions.
 * Though Doc can provide responses in other languages, Doc hasn't read the non-English versions of NetApp product docs. To ensure you have the most accurate information possible, always verify Doc's responses in English.
 
 == Tips
