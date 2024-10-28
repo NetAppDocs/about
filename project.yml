@@ -1,4 +1,3 @@
-jekyll: staging
 settings:
   name: "About docs.netapp.com"
   internal:
@@ -12,10 +11,8 @@ sidebar:
   - title: About the sites
     url: /docs-netapp-com.html
   - title: About Doc (AI-powered assistant)
-    entries:
-      - title: Capabilities & limitations
-        url: /about-doc-gen-ai-assistant.html
-      - title: Terms of use
-        url: /doc-gen-ai-assistant-terms-of-use.html   
+    url: /doc-gen-ai-assistant.html
+  - title: Terms of use
+    url: /doc-gen-ai-assistant-terms-of-use.html   
   - title: Legal notices
     url: /legal-notices.html
