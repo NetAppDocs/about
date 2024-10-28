@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: about-doc-gen-ai-assistant.html
+permalink: doc-gen-ai-assistant.html
 keywords: netapp, generative ai, doc
 summary: "The NetApp generative AI-powered assistant Doc is available on docs.netapp.com. Doc responds to questions about NetApp products using only the content published on this site. Doc does not use content from other NetApp sites or the public internet to answer questions."
 ---
