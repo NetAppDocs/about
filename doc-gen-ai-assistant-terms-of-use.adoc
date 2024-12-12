@@ -22,4 +22,4 @@ By using Doc, you agree to abide by the following rules and stipulations when ge
 * Do not try to engage Doc in conversations that are outside the scope of its intended purpose or to get answers to questions that are not about NetApp products.
 
 == Feedback
-We are working to continually improve Doc. Please send us feedback inside Doc's chat window. Let us know if Doc's answers are accurate and helpful or if they're incomplete or in any way insufficient. You can also mailto:ng-doccoments@netapp.com[contact us] if you have any questions or concerns regarding Doc's capabilities or responses.
+We are working to continually improve Doc. Please send us feedback inside Doc's chat window. Let us know if Doc's answers are accurate and helpful or if they're incomplete or in any way insufficient. You can also mailto:ng-doccomments@netapp.com[contact us] if you have any questions or concerns regarding Doc's capabilities or responses.

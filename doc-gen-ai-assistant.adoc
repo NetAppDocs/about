@@ -29,7 +29,7 @@ Doc shares insights into how it generates its responses, giving you the opportun
 
 == Limitations
 * Doc only uses content published on docs.netapp.com to generate answers. Doc does not generate answers from content published on other NetApp web sites.
-* During Beta, Doc does not refer to all documentation for all NetApp products. Doc only refers to a subset of documentation, including but not limited to ONTAP, BlueXP, StorageGRID, Keystone, and SnapCenter docs to help generate answers. If you’re looking for information that Doc doesn’t know about, mailto:ng-doccoments@netapp.com[let us know].
+* During Beta, Doc does not refer to all documentation for all NetApp products. Doc only refers to a subset of documentation, including but not limited to ONTAP, BlueXP, StorageGRID, Keystone, and SnapCenter docs to help generate answers. If you’re looking for information that Doc doesn’t know about, mailto:ng-doccomments@netapp.com[let us know].
 * If a NetApp product has multiple versions of documentation, Doc only refers to the latest version to help generate answers.
 * Doc does not refer to the page you're on to make assumptions about the product you're interested in. Be as specific as possible with your questions, mentioning product names and versions.
 * Though Doc can provide responses in other languages, Doc hasn't read the non-English versions of NetApp product docs. To ensure you have the most accurate information possible, always verify Doc's responses in English.
@@ -56,4 +56,4 @@ If you were having a conversation with a human, you would likely stress the phra
 Try different patterns and approaches to asking questions. If you don't get the result you want, try rephrasing your question.
 
 == Feedback
-We are working to continually improve Doc. Please send us feedback inside Doc's chat window. Let us know if Doc's answers are accurate and helpful or if they're incomplete or in any way insufficient. You can also mailto:ng-doccoments@netapp.com[contact us] if you have any questions or concerns regarding Doc's capabilities or responses.
+We are working to continually improve Doc. Please send us feedback inside Doc's chat window. Let us know if Doc's answers are accurate and helpful or if they're incomplete or in any way insufficient. You can also mailto:ng-doccomments@netapp.com[contact us] if you have any questions or concerns regarding Doc's capabilities or responses.
