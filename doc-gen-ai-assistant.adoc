@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: doc-gen-ai-assistant.html
 keywords: netapp, generative ai, doc
-summary: "The NetApp generative AI-powered assistant Doc is available on docs.netapp.com. Doc responds to questions about NetApp products using only the content published on this site. Doc does not use content from other NetApp sites or the public internet to answer questions."
+summary: "Doc is the NetApp AI assistant available on docs.netapp.com. It answers questions using only the content from this site. Doc does not use content from other NetApp sites or the public internet to answer questions."
 ---
 = NetApp generative AI-powered assistant overview
 :hardbreaks:
@@ -11,49 +11,59 @@ summary: "The NetApp generative AI-powered assistant Doc is available on docs.ne
 :imagesdir: ./media/
 
 [.lead]
-The NetApp generative AI-powered assistant, "Doc," is available on docs.netapp.com. Doc responds to questions about NetApp products using only the content published on this site. Doc does not use content from other NetApp sites or the public internet to answer questions.
+Doc is the NetApp AI assistant available on docs.netapp.com. It answers questions using only the content from this site. Doc does not use content from other NetApp sites or the public internet to answer questions.
 
-== Capabilities
-* Doc is not an elephant but has quite a memory. 
-+
-Most of the time, Doc remembers and pays attention to what you're discussing. If Doc loses track of a conversation, you can start a new one in the same chat session.
-* Doc is an avid reader. 
-+
-Whenever our docs get published on docs.netapp.com (and that happens a lot), Doc reads and will be able to reference them to generate its responses. It's amazing how fast Doc learns.
-* Doc is consultative. 
-+
-Doc offers suggestions for questions you might want to ask in addition to those you've asked.
-* Doc is communicative.
-+
-Doc shares insights into how it generates its responses, giving you the opportunity to rephrase your questions.
+Doc can build responses from previous questions, suggest additional questions, and explain how it generates responses. This makes it a valuable tool for navigating NetApp documentation.
 
-== Limitations
-* Doc only uses content published on docs.netapp.com to generate answers. Doc does not generate answers from content published on other NetApp web sites.
-* During Beta, Doc does not refer to all documentation for all NetApp products. Doc only refers to a subset of documentation, including but not limited to ONTAP, BlueXP, StorageGRID, Keystone, and SnapCenter docs to help generate answers. If you’re looking for information that Doc doesn’t know about, mailto:ng-doccomments@netapp.com[let us know].
-* If a NetApp product has multiple versions of documentation, Doc only refers to the latest version to help generate answers.
-* Doc does not refer to the page you're on to make assumptions about the product you're interested in. Be as specific as possible with your questions, mentioning product names and versions.
-* Though Doc can provide responses in other languages, Doc hasn't read the non-English versions of NetApp product docs. To ensure you have the most accurate information possible, always verify Doc's responses in English.
+== Scope and limitations
+Doc can only answer questions based on content published on docs.netapp.com.
 
-== Tips
-* Doc loves specific questions. 
+NOTE: During this beta phase, Doc is trained only on ONTAP, BlueXP, StorageGRID, Keystone, and SnapCenter content. If you need information Doc doesn't have, let us know.
+
+* If you don't specify a product version, Doc answers questions based on the latest published version. If needed, you can specify an earlier version in your question. 
+* Doc does not know what page you are on when you ask a question. For best results, be specific with product names and versions. 
+* Doc can chat in languages supported on docs.netapp.com, but isn't trained on non-English versions. 
+
+== Writing good prompts
+Follow these tips for the best experience with Doc.
+
+Ask specific questions.:: Write detailed questions and specify the product name, version, and interface type (GUI, API). For example:
 +
-Doc provides better responses when you explicitly cite a product name, interface (for example, GUI or API), and version. For example: _What steps should I follow in System Manager to upgrade from ONTAP 9.8 to ONTAP 9.12.1?_
-* Need to learn how to do something? 
+====
+What steps should I follow in System Manager to upgrade from ONTAP 9.8 to ONTAP 9.12.1?
+====
+
+Ask for steps to complete a task.:: Ask Doc to include the steps to complete a process. Instead of asking _How do I install the BlueXP Connector without internet?_ try:
 +
-Consider asking Doc to include the steps. Instead of asking Doc _How do I install the BlueXP Connector without internet?_ try asking _What steps should I follow to install the BlueXP Connector without internet?_
-* Ask simple questions. 
+====
+What steps should I follow to install the BlueXP Connector without internet?
+====
+
+Break complex questions into chunks.:: Break complex questions into smaller questions (also known as _chaining_). Doc remembers previous questions and builds more complex answers as you continue to chat. 
 +
-If you need to ask a complex question, break it into smaller questions (this is sometimes referred to as chaining questions). During a chat session, Doc pays attention and remembers the questions you ask. 
+For example, instead of asking Doc _How do I configure ransomware protection and backup schedules in BlueXP?_ try:
 +
-Instead of asking Doc _How do I configure ransomware protection and backup schedules in BlueXP?_ try _What are the steps to configure ransomware protection in BlueXP?_ and _What are the steps to configure backup schedules in BlueXP?_
-* Use quotation marks to clarify when you want Doc to pay attention to multi-word phrases that Doc could misinterpret. 
+====
+What are the steps to configure ransomware protection in BlueXP?
+====
 +
-For example, if you ask Doc _How is storage efficiency calculated in ONTAP?_ it's possible Doc could think you're asking about storage and efficiency as two unrelated words. To make sure Doc understands that you're asking about (the concept called) storage efficiency, wrap that phrase inside quotes like so: _How is "storage efficiency" calculated in ONTAP?_
+then ask:
 +
-If you were having a conversation with a human, you would likely stress the phrase, possibly use air quotes, or gesture in some way that makes the distinction obvious. Think of the double-quotes as a gesture that helps Doc understand what you're talking about.
-* After responding, Doc provides insights into how it generated its response. Get curious. 
+====
+What are the steps to configure backup schedules in BlueXP?
+====
+
+Use quotation marks.:: Enclose multi-word phrases in quotation marks. This helps Doc recognize the phrase as a single concept, similar to how you might emphasize it in a conversation with a human.
 +
-Try different patterns and approaches to asking questions. If you don't get the result you want, try rephrasing your question.
+For example, in this question, _How is storage efficiency calculated in ONTAP?_ Doc might think you're asking about _storage_ and _efficiency_ as two unrelated words. Instead try:
++
+====
+How is "storage efficiency" calculated in ONTAP?
+====
+
+Review how Doc responded.:: After responding, Doc provides insights into how it generated its response. This can give you ideas for how to refine your question to get the results you want. 
+
+Clear your chat history:: If you want to change topics, clear the chat at start fresh. Because Doc remembers previous questions, topic changes can produce unexpected results. 
 
 == Feedback
-We are working to continually improve Doc. Please send us feedback inside Doc's chat window. Let us know if Doc's answers are accurate and helpful or if they're incomplete or in any way insufficient. You can also mailto:ng-doccomments@netapp.com[contact us] if you have any questions or concerns regarding Doc's capabilities or responses.
+Your feedback helps us improve how Doc responds. Use the feedback tool in the Doc chat window to let us know if answers are accurate and helpful or if they need improvement. You can also mailto:ng-doccomments@netapp.com[contact us] with questions or feedback.
