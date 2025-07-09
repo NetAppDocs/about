@@ -20,8 +20,8 @@ Doc can answer only questions based on select content published on docs.netapp.c
 
 NOTE: During this beta phase, Doc isn't trained on all docs.netapp.com content. Doc can answer questions about content including but not limited to ONTAP, BlueXP, StorageGRID, Keystone, and SnapCenter content. If you need information Doc doesn't have, let us know.
 
-* If you don't specify a product version, Doc answers questions based on the latest published version. If needed, you can specify an earlier version in your question. 
-* Doc does not know what page you are on when you ask a question. For best results, be specific with product names and versions. 
+* If separate documentation is published for more than one version of a product, Doc answers questions based on the documentation for the most recent product release only. For example, if documentation for the 1.0 version of a product is published and the documentation for the 2.0 and most recent product version is also published, Doc only refers to the 2.0 documentation.
+* For best results, always be specific with product names. Doc knows what page you are on when you ask a question, but it is only one of several factors Doc takes into consideration when formulating an answer. 
 * Doc can chat in languages supported on docs.netapp.com, but isn't trained on non-English versions. 
 
 == Writing good prompts
