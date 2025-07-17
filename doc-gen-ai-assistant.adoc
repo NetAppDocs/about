@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: doc-gen-ai-assistant.html
 keywords: netapp, generative ai, doc
-summary: "Doc is the NetApp AI assistant available on docs.netapp.com. It answers questions using only the content from this site. Doc doesn't use content from other NetApp sites or the public internet to answer questions."
+summary: "Doc is our generative AI-powered assistant on docs.netapp.com. Doc is designed to respond to questions about NetApp products, using content published on docs.netapp.com."
 ---
 = NetApp generative AI-powered assistant overview
 :hardbreaks:
@@ -11,14 +11,14 @@ summary: "Doc is the NetApp AI assistant available on docs.netapp.com. It answer
 :imagesdir: ./media/
 
 [.lead]
-Doc is the NetApp AI assistant available on docs.netapp.com. It answers questions using only the content from this site. Doc doesn't use content from other NetApp sites or the public internet to answer questions.
+Doc is our generative AI-powered assistant on docs.netapp.com. Doc is designed to respond to questions about NetApp products, using content published on docs.netapp.com.
 
 Doc can build responses from previous questions, suggest additional questions, and explain how it generates responses. This makes it a valuable tool for navigating NetApp documentation.
 
 == Scope and limitations
 Doc can answer only questions based on select content published on docs.netapp.com.
 
-NOTE: During this beta phase, Doc isn't trained on all docs.netapp.com content. Doc can answer questions about content including but not limited to ONTAP, BlueXP, StorageGRID, Keystone, and SnapCenter content. If you need information Doc doesn't have, let us know.
+NOTE: During the Beta phase, Doc uses most but not all content published on docs.netapp.com to answer questions. Doc is familiar with all ONTAP, BlueXP, StorageGRID, E-Series, Keystone, and SnapCenter docs and uses them to answer questions about those products. On the other hand, Doc is not familiar with some legacy products' docs. For example, Doc does not use SnapDrive for UNIX docs to provide answers. Throughout the Beta, we are working to refine Doc's knowledge. If you need information Doc doesn't have, mailto:ng-doccomments@netapp.com[let us know].
 
 * Doc answers questions based on the latest published version of a product only. For example, if there is documentation for the 1.0 version and the 2.0 version of a product, Doc only refers to the most recent 2.0 documentation.
 * For best results, always be specific with product names. Doc knows what page you are on when you ask a question, but it is only one of several factors Doc takes into consideration when formulating an answer. 
@@ -63,7 +63,7 @@ How is "storage efficiency" calculated in ONTAP?
 
 Review how Doc responded.:: After responding, Doc provides insights into how it generated its response. This can give you ideas for how to refine your question to get the results you want. 
 
-Clear your chat history:: If you want to change topics, clear the chat at start fresh. Because Doc remembers previous questions, topic changes can produce unexpected results. 
+Clear your chat history:: If you want to change topics (for example, if you want to ask about a different product), clear the chat history to start a new session. If you don't clear the chat before starting a new topic, you might get inaccurate results. 
 
 == Feedback
-Your feedback helps us improve how Doc responds. Use the feedback tool in the Doc chat window to let us know if answers are accurate and helpful or if they need improvement. You can also mailto:ng-doccomments@netapp.com[contact us] with questions or feedback.
+We are working to continually improve Doc. Please send us feedback inside Doc's chat window. Let us know if Doc's answers are accurate and helpful or if they're incomplete or in any way insufficient. You can also mailto:ng-doccomments@netapp.com[contact us] if you have any questions or concerns regarding Doc's capabilities or responses.
