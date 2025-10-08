@@ -18,7 +18,7 @@ Doc can build responses from previous questions, suggest additional questions, a
 == Scope and limitations
 Doc can answer only questions based on select content published on docs.netapp.com.
 
-NOTE: During the Beta phase, Doc uses most but not all content published on docs.netapp.com to answer questions. Doc is familiar with all ONTAP, BlueXP, StorageGRID, E-Series, Keystone, and SnapCenter docs and uses them to answer questions about those products. On the other hand, Doc is not familiar with some legacy products' docs. For example, Doc does not use SnapDrive for UNIX docs to provide answers. Throughout the Beta, we are working to refine Doc's knowledge. If you need information Doc doesn't have, mailto:ng-doccomments@netapp.com[let us know].
+NOTE: During the Beta phase, Doc uses most but not all content published on docs.netapp.com to answer questions. Doc is familiar with all ONTAP, NetApp Console, StorageGRID, E-Series, Keystone, and SnapCenter docs and uses them to answer questions about those products. On the other hand, Doc is not familiar with the documentation of some legacy products. For example, Doc does not use SnapDrive for UNIX docs to provide answers. Throughout the Beta, we are working to refine Doc's knowledge. If you need information Doc doesn't have, mailto:ng-doccomments@netapp.com[let us know].
 
 * Doc answers questions based on the latest published version of a product only. For example, if there is documentation for the 1.0 version and the 2.0 version of a product, Doc only refers to the most recent 2.0 documentation.
 * For best results, always be specific with product names. Doc knows what page you are on when you ask a question, but it is only one of several factors Doc takes into consideration when formulating an answer. 
@@ -33,24 +33,24 @@ Ask specific questions.:: Write detailed questions and specify the product name,
 What steps should I follow in System Manager to upgrade from ONTAP 9.8 to ONTAP 9.12.1?
 ====
 
-Ask for steps to complete a task.:: Ask Doc to include the steps to complete a process. Instead of asking _How do I install the BlueXP Connector without internet?_ try:
+Ask for steps to complete a task.:: Ask Doc to include the steps to complete a process. Instead of asking _How do I install the NetApp Console agent without internet?_ try:
 +
 ====
-What steps should I follow to install the BlueXP Connector without internet?
+What steps should I follow to install the NetApp Console agent without internet?
 ====
 
 Break complex questions into chunks.:: Break complex questions into smaller questions (also known as _chaining_). Doc remembers previous questions and builds more complex answers as you continue to chat. 
 +
-For example, instead of asking Doc _How do I configure ransomware protection and backup schedules in BlueXP?_ try:
+For example, instead of asking Doc _How do I configure ransomware protection and backup schedules in the NetApp Console?_ try:
 +
 ====
-What are the steps to configure ransomware protection in BlueXP?
+What are the steps to configure ransomware protection in the NetApp Console?
 ====
 +
 then ask:
 +
 ====
-What are the steps to configure backup schedules in BlueXP?
+What are the steps to configure backup schedules in the NetApp Console?
 ====
 
 Use quotation marks.:: Enclose multi-word phrases in quotation marks. This helps Doc recognize the phrase as a single concept, similar to how you might emphasize it in a conversation with a human.
