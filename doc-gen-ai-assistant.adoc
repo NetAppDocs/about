@@ -16,7 +16,7 @@ Doc is our generative AI-powered assistant on docs.netapp.com. Doc is designed t
 Doc can build responses from previous questions, suggest additional questions, and explain how it generates responses. This makes it a valuable tool for navigating NetApp documentation.
 
 == Scope and limitations
-Doc can answer only questions based on select content published on docs.netapp.com.
+Doc can answer only questions based on content published on docs.netapp.com.
 
 * Doc answers questions based on the latest published version of a product only. For example, if there is documentation for the 1.0 version and the 2.0 version of a product, Doc only refers to the most recent 2.0 documentation.
 * For best results, always be specific with product names. Doc knows what page you are on when you ask a question, but it is only one of several factors Doc takes into consideration when formulating an answer. 
