@@ -33,17 +33,17 @@ The docs.netapp.com MCP server provides a standardized, agent-ready integration 
 
 == How the docs.netapp.com MCP server works
 
-The MCP server and AI agents interact in three high-level steps to retrieve and return grounded responses from official NetApp documentation:
+The MCP server and AI agents interact to retrieve and return grounded responses from official NetApp documentation:
 
-. The AI agent sends a request to the MCP server
-. The MCP server retrieves relevant documentation
-. The system returns a structured, grounded response
+* The AI agent sends a request to the MCP server
+* The MCP server retrieves relevant documentation
+* The system returns a structured, grounded response
 
 The following diagram shows the high-level design architecture:
 
-image:./media/simple-arch.png[]
+image:simple-arch.png[high-level docs.netapp.com MCP server architecture]
 
-This design ensures responses are based on authoritative documentation and remain consistent and accurate.
+This design ensures that responses are based on authoritative documentation and remain consistent and accurate.
 
 
 == Available capabilities and tools
