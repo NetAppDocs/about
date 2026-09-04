@@ -1,0 +1,14 @@
+---
+sidebar: sidebar
+permalink: get-started-mcp-server.html
+keywords: 
+summary: 
+---
+= Get started with the docs.netapp.com MCP server
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
