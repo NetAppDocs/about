@@ -85,9 +85,9 @@ AI agents use the following deterministic workflow when interacting with the ser
 . Extract steps, explanations, or key details.
 . Optionally use netapp_docs_ask to synthesize answers across documents.
 
-This ensures that responses are grounded in authoritative documentation, hallucinations are minimized, and answers are structured and accurate.
+This ensures that responses are grounded in authoritative documentation, AI hallucinations are minimized, and answers are structured and accurate.
 
-== Requirements and access control
+== Requirements
 
 * *Authentication*: Access is managed through NetApp API Management (APIM). Trusted internal requests are authenticated through network IP filtering. External or partner requests utilize an APIM subscription key.
 * *Client Compatibility*: Supported on any MCP-compliant client environment, including Visual Studio Code (GitHub Copilot), Claude Desktop, and Python-based agent frameworks.
@@ -96,8 +96,7 @@ This ensures that responses are grounded in authoritative documentation, halluci
 == Limitations
 
 * *Content Scope*: The MCP server queries publicly published NetApp technical documentation. It does not access private tenant data or internal user profile information.
-* *Scalability*: Deployed on scalable cloud infrastructure (Azure App Service) to ensure high availability and minimal latency overhead.
-* *Continuous Refresh*: Content indexed by the underlying search and RAG orchestrator updates incrementally as technical documentation is published.
+* *Continuous Refresh*: Content indexed by the underlying search and RAG orchestrator is updated incrementally as technical documentation is published.
 
 .What's next
 
