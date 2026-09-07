@@ -23,51 +23,65 @@ By providing structured access to NetApp documentation, the docs.netapp.com MCP 
 
 == Use cases
 
-The docs.netapp.com MCP server enables you to:
+You can use the docs.netapp.com MCP server to:
 
 * Ask natural language questions about NetApp products
 
 * Get answers grounded in official documentation
 
-*  Avoid building custom search or RAG pipelines
+* Avoid building custom search or RAG pipelines
 
 * Ensure responses are accurate and verifiable
 
-It provides three primary tools for different use cases:
+The following table shows the three primary tools provided by the docs.netapp.com MCP server,  the required input and output, and recommended use cases.
 
 [cols="1,1,3, options="header"]
 |===
-| Tool name | Use case | Description
+| Tool name |Input/Output | Use case 
+
+a| `netapp_docs_ask` (recommended default)
+a|
+* *Input:* A question
+* *Output:* A synthesized answer with references
+a|  Generates synthesized, documentation-grounded answers using RAG. Use this for most scenarios.
+
+Best used for:
+
+* How-to questions
+* Conceptual explanations
+* Troubleshooting
+* Comparisons
+* Combining information across multiple documents
 
 a| `netapp_docs_search`
-a| Search NetApp documentation and return relevant pages.
-
-a| Discovers relevant documentation using keyword and natural language queries. 
-
+a|
 * *Input:* A query using keywords and natural language
 * *Output:* A list of documents with title, summary, and URL
 
+a| Searches NetApp documentation and return relevant pages. Discovers relevant documentation using keyword and natural language queries. 
+
+Best used for:
+
+* Keyword-based queries
+* Exploring available content
+* Finding relevant documentation pages
+* Example queries (Keyword Style)
+* Product or feature discovery
+
 a| `netapp_docs_fetch`
-a| Retrieve full documentation content for a URL. 
-
-Used to extract steps, explanations, and details.
-
-a| Retrieve full, structured document content by article URL. 
-
+a|
 * *Input:* NetApp documentation URL
 * *Output:* Structured text content (title, summary, and article)
+a| Used to extract steps, explanations, and details. Use this tool when you have already identified the document and need detailed content.
 
-a| `netapp_docs_ask`
-a|  Generate answers using RAG. 
+Best used for:
 
-Used when combining information across multiple documents.
-a| Generates synthesized, documentation-grounded answers using RAG. 
-
-* *Input:* A question
-* *Output:* A synthesized answer with references
+* Extracting step-by-step procedures
+* Reading full documentation
+* Deep technical details
+*Note:* `netapp_docs_fetch` is typically used after netapp_docs_search when you want to inspect a specific document.
 
 |===
-
 
 == How the docs.netapp.com MCP server works
 
