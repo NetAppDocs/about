@@ -12,60 +12,69 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-The docs.netapp.com Model Context Protocol (MCP) server enables AI tools, development environments, and autonomous agents to bring trusted, up-to-date technical information directly from official NetApp documentation into developer and engineering workflows.
-
-NOTE: The docs.netapp.com MCP server endpoint (`https://docs-stage.netapp.com/mcp`) is designed for programmatic interaction by MCP-compliant clients using HTTP and Streamable HTTP transport. Direct browser access is not supported.
-
 The docs.netapp.com MCP server provides a standardized, agent-ready integration layer in front of existing NetApp documentation and Retrieval-Augmented Generation (RAG) services. It allows AI agents, such as GitHub Copilot in Visual Studio Code, Claude Desktop, and custom Python AI agents, to interact with enterprise technical knowledge using natural language without requiring direct REST API integration or custom pipeline development.
 
-== Key benefits
+The docs.netapp.com MCP server provides structured access to NetApp documentation and enables AI agents to:
 
-* *Reduced integration effort*: Teams integrate with NetApp technical content using a single, standard MCP protocol instead of building and maintaining custom REST adapters.
-* *Agent-ready architecture*: As MCP adoption expands across IDEs, AI tools, and desktop environments, NetApp documentation becomes immediately accessible without additional enablement overhead.
-* *Grounded and verifiable answers*: Responses delivered through the MCP server are retrieved directly from official NetApp documentation, eliminating hallucination risks and ensuring technical accuracy.
-* *Composable workflows*: Reusable tools allow AI agents to synthesize high-level technical guidance while preserving user oversight and policy controls.
+* Discover relevant documentation
+* Retrieve complete document content
+* Generate answers based on documentation (RAG)
+* Produce grounded, verifiable responses
 
-== Use Cases
+== Use cases
 
-* *In-IDE Technical Guidance*: Enhance agentic development environments such as Visual Studio Code and GitHub Copilot with real-time NetApp product documentation, configuration steps, and troubleshooting procedures.
-* *Custom AI Agents and Applications*: Connect custom AI agents, automated workflow scripts, and enterprise copilots to NetApp documentation using standardized tool calls.
-* *Workflow Integration for Engineers and Support*: Enable storage administrators, systems engineers, and technical support personnel to query ONTAP, MetroCluster, SnapCenter, and FabricPool documentation within their active flow of work.
+*  Enhance agentic development environments such as Visual Studio Code and GitHub Copilot with real-time NetApp product documentation, configuration steps, and troubleshooting procedures.
+* Connect custom AI agents, automated workflow scripts, and enterprise copilots to NetApp documentation using standardized tool calls.
+*  Enable storage administrators, systems engineers, and technical support personnel to query NetApp documentation within their active flow of work.
+
+The docs.netapp.com MCP server provides three primary tools for different use cases:
+
+[cols="1,1,3, options="header"]
+|===
+| Tool name | Use case | Description
+
+a| `netapp_docs_search`
+a| Search NetApp documentation and return relevant pages.
+
+Always used as the first step in the workflow.
+
+a| Discovers relevant documentation using keyword and natural language queries. 
+
+* *Input:* A query using keywords and natural language
+* *Output:* A list of documents with title, summary, and URL
+
+a| `netapp_docs_fetch`
+a| Retrieve full documentation content for a URL. 
+
+Used to extract steps, explanations, and details.
+
+a| Retrieve full, structured document content by article URL. 
+
+* *Input:* NetApp documentation URL
+* *Output:* Structured text content (title, summary, and article)
+
+a| `netapp_docs_ask`
+a|  Generate answers using RAG. 
+
+Used when combining information across multiple documents.
+a| Generates synthesized, documentation-grounded answers using RAG. 
+
+* *Input:* A question
+* *Output:* A synthesized answer with references
+
+|===
+
 
 == How the docs.netapp.com MCP server works
 
-The MCP server and AI agents interact to retrieve and return grounded responses from official NetApp documentation:
+The MCP server and AI agents interact to retrieve and return grounded responses from official NetApp documentation. 
 
 * The AI agent sends a request to the MCP server
 * The MCP server retrieves relevant documentation
 * The system returns a structured, grounded response
 
-The following diagram shows the high-level design architecture:
-
-image:simple-arch.png[high-level docs.netapp.com MCP server architecture]
-
 This design ensures that responses are based on authoritative documentation and remain consistent and accurate.
 
-
-== Available capabilities and tools
-
-The MCP server provides three primary tools:
-
-[cols="1,2,2", options="header"]
-|===
-| Tool name | Purpose | Recommended use
-
-| `netapp_docs_ask`
-| Generates synthesized, documentation-grounded answers using RAG.
-| Default recommendation for conceptual queries, how-to instructions, and troubleshooting.
-
-| `netapp_docs_search`
-| Discovers relevant documentation using keyword and natural language queries.
-| Exploring available content, finding specific article URLs, and topic discovery.
-
-| `netapp_docs_fetch`
-| Retrieves full, structured document content by article URL.
-| Extracting detailed step-by-step procedures, technical specifications, and full article text.
-|===
 
 == Requirements and access control
 
@@ -73,7 +82,7 @@ The MCP server provides three primary tools:
 * *Client Compatibility*: Supported on any MCP-compliant client environment, including Visual Studio Code (GitHub Copilot), Claude Desktop, and Python-based agent frameworks.
 * *Terms of Service*: Usage is subject to official NetApp documentation terms and access governance policies.
 
-== Capabilities and Limitations
+== Limitations
 
 * *Content Scope*: The MCP server queries publicly published NetApp technical documentation. It does not access private tenant data or internal user profile information.
 * *Scalability*: Deployed on scalable cloud infrastructure (Azure App Service) to ensure high availability and minimal latency overhead.
