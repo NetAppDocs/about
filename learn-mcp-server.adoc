@@ -23,7 +23,15 @@ By providing structured access to NetApp documentation, the docs.netapp.com MCP 
 
 == Use cases
 
-The docs.netapp.com MCP server enables storage administrators, systems engineers, and technical support personnel to query NetApp documentation within their active flow of work.
+The docs.netapp.com MCP server enables you to:
+
+* Ask natural language questions about NetApp products
+
+* Get answers grounded in official documentation
+
+*  Avoid building custom search or RAG pipelines
+
+* Ensure responses are accurate and verifiable
 
 It provides three primary tools for different use cases:
 
@@ -91,9 +99,6 @@ This ensures that responses are grounded in authoritative documentation, halluci
 * *Scalability*: Deployed on scalable cloud infrastructure (Azure App Service) to ensure high availability and minimal latency overhead.
 * *Continuous Refresh*: Content indexed by the underlying search and RAG orchestrator updates incrementally as technical documentation is published.
 
-== Next Steps
-
-To begin using the NetApp Docs MCP Server in your development environment, refer to the following resources:
+.What's next
 
 * xref:mcp-get-started.adoc[Get started with the NetApp Docs MCP Server]
-* link:https://docs.netapp.com[NetApp Documentation Portal]
