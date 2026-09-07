@@ -35,14 +35,12 @@ You can use the docs.netapp.com MCP server to:
 
 The following table shows the three primary tools provided by the docs.netapp.com MCP server,  the required input and output, and recommended use cases.
 
-[cols="1,1,3, options="header"]
+[cols="1,3, options="header"]
 |===
-| Tool name |Input/Output | Use case 
+| Tool name | Use case 
 
 a| `netapp_docs_ask` (recommended default)
-a|
-* *Input:* A question
-* *Output:* A synthesized answer with references
+
 a|  Generates synthesized, documentation-grounded answers using RAG. Use this for most scenarios.
 
 Best used for:
@@ -54,9 +52,6 @@ Best used for:
 * Combining information across multiple documents
 
 a| `netapp_docs_search`
-a|
-* *Input:* A query using keywords and natural language
-* *Output:* A list of documents with title, summary, and URL
 
 a| Searches NetApp documentation and return relevant pages. Discovers relevant documentation using keyword and natural language queries. 
 
@@ -69,9 +64,6 @@ Best used for:
 * Product or feature discovery
 
 a| `netapp_docs_fetch`
-a|
-* *Input:* NetApp documentation URL
-* *Output:* Structured text content (title, summary, and article)
 a| Used to extract steps, explanations, and details. Use this tool when you have already identified the document and need detailed content.
 
 Best used for:
@@ -79,6 +71,7 @@ Best used for:
 * Extracting step-by-step procedures
 * Reading full documentation
 * Deep technical details
+
 *Note:* `netapp_docs_fetch` is typically used after netapp_docs_search when you want to inspect a specific document.
 
 |===
