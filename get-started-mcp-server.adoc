@@ -44,6 +44,7 @@ You can connect to the MCP server from Visual Studio Code using GitHub Copilot b
 ====
 .Remote MCP Server (Recommended)
 --
+Update the `mcp.json` file to connect to the remote MCP server. 
 
 [source,json]
 ----
@@ -62,7 +63,7 @@ NOTE: Access to this endpoint is restricted. Ensure your device is connected to 
 --
 .Local MCP server
 --
-You can access the MCP server locally.
+Update the `mcp.json` file to connect to the local MCP server.
 
 [source,json]
 ----
@@ -79,7 +80,8 @@ You can access the MCP server locally.
 --
 .External access (Non-VPN users)
 --
-If you are not connected to the NetApp corporate network (VPN), you can still access the MCP service using an API subscription key.  If you do not already have a key, contact the IE development team to request access.
+If you are not connected to the NetApp corporate network (VPN), you can still access the MCP service using an API subscription key.  
+NOTE: If you do not already have a key, contact the IE development team to request access.
 
 [source,json]
 ----
@@ -185,7 +187,7 @@ To register the docs.netapp.com MCP server with Claude Desktop, update your conf
 
 ==  Step 2: Use the docs.netapp.com MCP server
 
-After you've configured the MCP server, you can interact with NetApp technical documentation directly inside Visual Studio Code or your chosen client interface. The docs.netapp.com MCP server has three primary tools. Understanding when to use each ensures optimal performance.
+After you've configured the MCP server, you can interact with NetApp technical documentation directly inside Visual Studio Code or your chosen client interface. The docs.netapp.com MCP server has three primary tools. Understanding when to use each tool is important for optimal performance.
 
 * Start with `netapp_docs_ask` for most questions.
 * Use `netapp_docs_search` for keyword-based discovery.
@@ -195,7 +197,7 @@ After you've configured the MCP server, you can interact with NetApp technical d
 
 NOTE: MCP tools are independent, there is no required execution flow. However, it is recommended to start with `netapp_docs_ask` for most scenarios. This provides the fastest and most complete results.
 
-=== Use `netapp_docs_ask` (recommended default)
+=== Use netapp_docs_ask (recommended default)
 
 Generates complete, synthesized answers grounded in official documentation with reference citations. Use this for how-to questions, troubleshooting, conceptual explanations, and comparison.
 
@@ -223,7 +225,7 @@ Example comparison questions::
 * _What is the key difference between SnapMirror and SnapVault?_
 * _AFF vs FAS — which one should I use and when?_
 
-=== Use `netapp_docs_search`
+=== Use netapp_docs_search
 Discovers relevant documentation articles based on keyword queries. Use this during early research or topic discovery.
 
 NOTE:  Use short keyword-style queries with `netapp_docs_search`. For complete answers, switch to `netapp_docs_ask`.
@@ -249,17 +251,17 @@ Example keyword-style queries for troubleshooting topics (discovery stage)::
 * _ONTAP latency issues_
 * _CIFS connection problems_
 * _Volume not visible ONTAP_
-*_ONTAP API errors_
+* _ONTAP API errors_
 
 
 Example keyword-style queries for concepts and features::
 
 * _WAFL architecture_
 * _ONTAP storage efficiency_
-*_SnapVault overview_
+* _SnapVault overview_
 * _MetroCluster concepts_
 
-=== Use `netapp_docs_fetch`
+=== Use netapp_docs_fetch
 Retrieves full, structured content for a specific article URL returned by search. Use when step-by-step procedures or exhaustive technical details are required.
 
 NOTE: `netapp_docs_fetch` is typically used after `netapp_docs_search` when you want to inspect a specific document.
