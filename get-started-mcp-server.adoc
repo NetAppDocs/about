@@ -176,6 +176,18 @@ To register the NetApp Docs MCP Server with Claude Desktop, update your configur
 
 Once configured, you can interact with NetApp technical documentation directly inside Visual Studio Code or your chosen client interface.
 
+.About this task
+
+* MCP tools are independent — there is no required execution flow
+* Start with netapp_docs_ask for most questions
+* Use netapp_docs_search for keyword-based discovery
+* Use netapp_docs_fetch to retrieve detailed document content
+* Use clear, complete questions over short or vague queries
+* Responses are always grounded in official NetApp documentation
+
+
+.Steps
+
 . Open **Copilot Chat** in Visual Studio Code.
 . Select **Agent Mode**.
 . Ask questions relevant to NetApp storage management, product features, or troubleshooting.
