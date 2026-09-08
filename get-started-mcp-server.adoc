@@ -157,7 +157,7 @@ Discovers relevant documentation articles based on keyword queries. Use during e
 `netapp_docs_fetch`::
 Retrieves full, structured content for a specific article URL returned by search. Use when step-by-step procedures or exhaustive technical details are required.
 
-== Step 3: set custom agent instructions (Recommended)
+== Step 3: Set custom agent instructions (Recommended)
 
 To ensure your AI agent consistently utilizes the NetApp Docs MCP Server when handling NetApp-related queries, add custom instructions to your workspace.
 
