@@ -12,22 +12,24 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-Get started by connecting your AI development environment, such as Visual Studio Code with GitHub Copilot, Claude Desktop, or custom Python agents, to the docs.netapp.com Model Context Protocol (MCP) server.
+Get started by connecting your AI development environment, such as Visual Studio Code with GitHub Copilot, Claude Desktop, or custom Python agents, to the docs.netapp.com Model Context Protocol (MCP) server. After configuration, learn when to use each docs.netapp.com MCP tool for optimal results. 
 
 == Before you begin
 
-Before configuring the NetApp Docs MCP Server, verify the following:
+Before configuring the docs.netapp.com MCP server, verify the following:
 
 * You have reviewed the information in link:learn-mcp-server.html[Learn about the docs.netapp.com MCP server].
 * Visual Studio Code is installed with the GitHub Copilot extension enabled.
-* If you require external client access, you must have an active *NetApp APIM Subscription Key*.
-* You have network access to the docs.netapp.com MCP endpoint: `https://docs-stage.netapp.com/mcp` (or production endpoint `https://docs.netapp.com/mcp`).
+* If you require external client access, you must have an active *NetApp APIM subscription key*. To request a key, contact the IE development team.
+* You have network access to the docs.netapp.com MCP endpoint: `\https://docs-stage.netapp.com/mcp` (or production endpoint `\https://docs.netapp.com/mcp`).
 
 == Step 1: Configure your development environment
 
-Choose the setup option that matches your environment.
+Choose the setup option for your environment.
 
 === Visual Studio Code setup
+
+You can connect to the MCP server from Visual Studio Code using GitHub Copilot by configuring an `mcp.json` file.
 
 .Steps
 
@@ -130,6 +132,15 @@ Add the server definition:
 +
 IMPORTANT: Restart Visual Studio Code after modifying global `mcp.json` files for the configuration to take effect.
 
+. Verify the configuration.
+.. Open Visual Studio Code in your workspace.
+.. Confirm that the `.vscode/mcp.json` file is present.
+.. Ask a question using Copilot. 
++
+.Example
++
+_What are the differences between ONTAP and Cloud Volumes ONTAP?_
+
 === Python AI agent integration
 
 For custom AI applications or Python agent pipelines, connect directly using an MCP client library:
@@ -149,9 +160,9 @@ response = client.call_tool("netapp_docs_ask", {
 print(response)
 ----
 
-=== Claude desktop configuration
+=== Claude Desktop configuration
 
-To register the NetApp Docs MCP Server with Claude Desktop, update your configuration file:
+To register the docs.netapp.com MCP server with Claude Desktop, update your configuration file:
 
 * *macOS*: `~/Library/Application Support/Claude/claude_desktop_config.json`
 * *Windows*: `%APPDATA%\Claude\claude_desktop_config.json`
@@ -174,43 +185,84 @@ To register the NetApp Docs MCP Server with Claude Desktop, update your configur
 
 ==  Step 2: Use the docs.netapp.com MCP server
 
-Once configured, you can interact with NetApp technical documentation directly inside Visual Studio Code or your chosen client interface.
+After you've configured the MCP server, you can interact with NetApp technical documentation directly inside Visual Studio Code or your chosen client interface. The docs.netapp.com MCP server has three primary tools. Understanding when to use each ensures optimal performance.
 
-.About this task
+* Start with `netapp_docs_ask` for most questions.
+* Use `netapp_docs_search` for keyword-based discovery.
+* Use `netapp_docs_fetch` to retrieve detailed document content.
+* Use clear, complete questions instead of short or vague queries.
+* Responses are always grounded in official NetApp documentation.
 
-* MCP tools are independent — there is no required execution flow
-* Start with netapp_docs_ask for most questions
-* Use netapp_docs_search for keyword-based discovery
-* Use netapp_docs_fetch to retrieve detailed document content
-* Use clear, complete questions over short or vague queries
-* Responses are always grounded in official NetApp documentation
+NOTE: MCP tools are independent, there is no required execution flow. However, it is recommended to start with `netapp_docs_ask` for most scenarios. This provides the fastest and most complete results.
+
+=== Use `netapp_docs_ask` (recommended default)
+
+Generates complete, synthesized answers grounded in official documentation with reference citations. Use this for how-to questions, troubleshooting, conceptual explanations, and comparison.
+
+Example configuration and how-to questions::
+* _How do I configure SnapMirror replication between two ONTAP clusters?_
+* _How do I perform a non-disruptive ONTAP upgrade?_
+* _What are the steps to set up SVM peering in ONTAP?_
+* _How do I create and manage aggregates in ONTAP?_
+* _How do I configure NFS access on an ONTAP cluster?_
+
+Example troubleshooting questions::
+* _SnapMirror replication is failing — how do I resolve connection errors?_
+* _Why are my volumes not visible after a failover in ONTAP?_
+* _What are common causes of high latency in ONTAP systems?_
+* _Why are my REST API calls not returning expected ONTAP objects?_
+* _How do I troubleshoot CIFS/SMB connection issues in ONTAP?_
+
+Example conceptual questions::
+* _What is WAFL and how does write allocation work in ONTAP?_
+* _How does SnapMirror replication work internally?_
+* _What is the difference between an SVM and a cluster in ONTAP?_
+
+Example comparison questions:: 
+
+* _What is the key difference between SnapMirror and SnapVault?_
+* _AFF vs FAS — which one should I use and when?_
+
+=== Use `netapp_docs_search`
+Discovers relevant documentation articles based on keyword queries. Use this during early research or topic discovery.
+
+NOTE:  Use short keyword-style queries with `netapp_docs_search`. For complete answers, switch to `netapp_docs_ask`.
+
+Example keyword-style queries for product or feature discovery::
+* _ONTAP upgrade_
+* _SnapMirror configuration_
+* _SVM peering_
+* _ONTAP REST API_
+* _NetApp Console setup_
+
+Example keyword-style queries for documentation lookup::
+
+* _ONTAP installation guide_
+* _SnapMirror best practices_
+* _CIFS configuration ONTAP_
+* _NFS setup ONTAP_
+* _ONTAP networking configuration_
+
+Example keyword-style queries for troubleshooting topics (discovery stage)::
+
+* _SnapMirror failure_
+* _ONTAP latency issues_
+* _CIFS connection problems_
+* _Volume not visible ONTAP_
+*_ONTAP API errors_
 
 
-.Steps
+Example keyword-style queries for concepts and features::
 
-. Open **Copilot Chat** in Visual Studio Code.
-. Select **Agent Mode**.
-. Ask questions relevant to NetApp storage management, product features, or troubleshooting.
+* _WAFL architecture_
+* _ONTAP storage efficiency_
+*_SnapVault overview_
+* _MetroCluster concepts_
 
-=== Recommended Tool Selection
-
-The NetApp Docs MCP Server exposes three tools. Understanding when to use each ensures optimal performance:
-
-`netapp_docs_ask` (Recommended Default)::
-Generates complete, synthesized answers grounded in official documentation with reference citations. Use for how-to questions, conceptual explanations, and troubleshooting.
-+
-* *Configuration / How-To*: "How do I configure SnapMirror replication between two ONTAP clusters?"
-* *Troubleshooting*: "SnapMirror replication is failing — how do I resolve connection errors?"
-* *Conceptual*: "What is WAFL and how does write allocation work in ONTAP?"
-* *Comparisons*: "What is the key difference between SnapMirror and SnapVault?"
-
-`netapp_docs_search`::
-Discovers relevant documentation articles based on keyword queries. Use during early research or topic discovery.
-+
-* *Examples*: `ONTAP upgrade`, `SnapMirror configuration`, `SVM peering`, `NFS setup ONTAP`
-
-`netapp_docs_fetch`::
+=== Use `netapp_docs_fetch`
 Retrieves full, structured content for a specific article URL returned by search. Use when step-by-step procedures or exhaustive technical details are required.
+
+NOTE: `netapp_docs_fetch` is typically used after `netapp_docs_search` when you want to inspect a specific document.
 
 
 
