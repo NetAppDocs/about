@@ -12,7 +12,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-Connect your AI development environment, such as Visual Studio Code with GitHub Copilot, Claude Desktop, or custom Python agents, to the docs.netapp.com Model Context Protocol (MCP) server.
+Get started by connecting your AI development environment, such as Visual Studio Code with GitHub Copilot, Claude Desktop, or custom Python agents, to the docs.netapp.com Model Context Protocol (MCP) server.
 
 == Before you begin
 
@@ -23,28 +23,25 @@ Before configuring the NetApp Docs MCP Server, verify the following:
 * If you require external client access, you must have an active *NetApp APIM Subscription Key*.
 * You have network access to the docs.netapp.com MCP endpoint: `https://docs-stage.netapp.com/mcp` (or production endpoint `https://docs.netapp.com/mcp`).
 
-== High-Level Workflow
-
-Integrating and using the MCP server involves four primary steps:
-
-. Configure your client application or development environment.
-. Connect to the NetApp Docs MCP server endpoint.
-. Query NetApp documentation using interactive natural language commands.
-. (Recommended) Configure system instructions to optimize tool selection by AI agents.
-
 == Step 1: Configure your development environment
 
 Choose the setup option that matches your environment.
 
-[role="tabbed-block"]
-====
-.Local VS Code workspace setup
---
-Use this option to enable the NetApp Docs MCP Server within a specific Visual Studio Code workspace.
+=== Visual Studio Code setup
 
 .Steps
-. Create a configuration file in your workspace directory at `.vscode/mcp.json`.
-. Add the following server configuration:
+
+. From your project workspace in Visual Studio Code, complete the following:
+
+.. Create a folder named `.vscode`
+.. Create a file within the folder called `mcp.json`
+
+. Configure the `mcp.json` file depending on whether you want to configure remote, local or external access to the MCP server. 
++
+[role="tabbed-block"]
+====
+.Remote MCP Server (Recommended)
+--
 
 [source,json]
 ----
@@ -52,23 +49,73 @@ Use this option to enable the NetApp Docs MCP Server within a specific Visual St
   "servers": {
     "netapp-docs-mcp": {
       "type": "http",
-      "url": "https://docs-stage.netapp.com/mcp"
+      "url": "https://apimanagement-rg-devops.azure-api.net/netappdocs/mcp"
     }
   }
 }
 ----
 
-. Save the file. When prompted by Visual Studio Code, enter your NetApp APIM Subscription Key.
---
-.Global VS Code setup (all workspaces)
---
-To make the NetApp Docs MCP Server available across all Visual Studio Code projects and workspaces, add the configuration to your global user settings directory.
+NOTE: Access to this endpoint is restricted. Ensure your device is connected to the NetApp corporate network (for example, via VPN) before attempting to connect.
 
+--
+.Local MCP server
+--
+You can access the MCP server locally.
+
+[source,json]
+----
+{
+  "servers": {
+    "netapp-docs-mcp": {
+      "type": "http",
+      "url": "http://localhost:8000"
+    }
+  }
+}
+----
+
+--
+.External access (Non-VPN users)
+--
+If you are not connected to the NetApp corporate network (VPN), you can still access the MCP service using an API subscription key.  If you do not already have a key, contact the IE development team to request access.
+
+[source,json]
+----
+{
+  "servers": {
+    "netapp-docs-mcp": {
+      "type": "http",
+      "url": "https://apimanagement-rg-devops.azure-api.net/netappdocs/mcp",
+      "headers": {
+        "Ocp-Apim-Subscription-Key": "${input:Ocp-Apim-Subscription-Key}"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "Ocp-Apim-Subscription-Key",
+      "description": "Enter your access key",
+      "password": true
+    }
+  ]
+}
+----
+
+--
+====
+
+. Save the file. 
+
+. Optionally, configure global access. 
++
+To make the NetApp Docs MCP Server available across all Visual Studio Code projects and workspaces, add the configuration to your global user settings directory.
++
 * *Windows*: `C:\Users\<your_username>\AppData\Roaming\Code\User\mcp.json`
 * *macOS*: `~/Library/Application Support/Code/User/mcp.json`
-
++
 Add the server definition:
-
++
 [source,json]
 ----
 {
@@ -80,12 +127,30 @@ Add the server definition:
   }
 }
 ----
-
++
 IMPORTANT: Restart Visual Studio Code after modifying global `mcp.json` files for the configuration to take effect.
 
---
-.Claude desktop configuration
---
+=== Python AI agent integration
+
+For custom AI applications or Python agent pipelines, connect directly using an MCP client library:
+
+[source,python]
+----
+from mcp import MCPClient
+
+# Initialize connection to the NetApp Docs MCP Server
+client = MCPClient("https://docs-stage.netapp.com/mcp")
+
+# Call the RAG answer tool
+response = client.call_tool("netapp_docs_ask", {
+    "question": "What are the steps to perform a non-disruptive ONTAP upgrade?"
+})
+
+print(response)
+----
+
+=== Claude desktop configuration
+
 To register the NetApp Docs MCP Server with Claude Desktop, update your configuration file:
 
 * *macOS*: `~/Library/Application Support/Claude/claude_desktop_config.json`
@@ -106,30 +171,8 @@ To register the NetApp Docs MCP Server with Claude Desktop, update your configur
 }
 ----
 
---
-.Python AI agent integration
---
-For custom AI applications or Python agent pipelines, connect directly using an MCP client library:
 
-[source,python]
-----
-from mcp import MCPClient
-
-# Initialize connection to the NetApp Docs MCP Server
-client = MCPClient("https://docs-stage.netapp.com/mcp")
-
-# Call the RAG answer tool
-response = client.call_tool("netapp_docs_ask", {
-    "question": "What are the steps to perform a non-disruptive ONTAP upgrade?"
-})
-
-print(response)
-----
-
---
-====
-
-== Step 2: Use the MCP Server
+==  Step 2: Use the docs.netapp.com MCP server
 
 Once configured, you can interact with NetApp technical documentation directly inside Visual Studio Code or your chosen client interface.
 
@@ -157,27 +200,5 @@ Discovers relevant documentation articles based on keyword queries. Use during e
 `netapp_docs_fetch`::
 Retrieves full, structured content for a specific article URL returned by search. Use when step-by-step procedures or exhaustive technical details are required.
 
-== Step 3: Set custom agent instructions (Recommended)
 
-To ensure your AI agent consistently utilizes the NetApp Docs MCP Server when handling NetApp-related queries, add custom instructions to your workspace.
 
-1. Open Copilot Chat in Visual Studio Code and select **Agent Mode**.
-2. Click the settings gear icon at the top of the chat window and select **Instructions**.
-3. Create or edit `.github/copilot-instructions.md` with the following configuration:
-
-[source,markdown]
-----
----
-applyTo: '**'
----
-## Querying NetApp Technical Documentation
-
-You have access to NetApp Docs MCP tools: `netapp_docs_ask`, `netapp_docs_search`, and `netapp_docs_fetch`. These tools provide access to official, up-to-date NetApp product documentation.
-
-When answering questions about NetApp technologies (including ONTAP, MetroCluster, SnapMirror, SnapCenter, FabricPool, and NetApp REST APIs):
-- Always prefer `netapp_docs_ask` as the primary tool to retrieve grounded answers and citations.
-- Use `netapp_docs_search` for keyword discovery when specific article links are required.
-- Use `netapp_docs_fetch` to extract full procedural text from article URLs.
-----
-
-=
