@@ -94,6 +94,66 @@ AI agents use the following deterministic workflow when interacting with the ser
 
 This ensures that responses are grounded in authoritative documentation, AI hallucinations are minimized, and answers are structured and accurate.
 
+=== System design architecture
+This system follows a layered architecture:
+
+* AI agents invoke MCP tools
+* Tools delegate execution to service layers
+* Services call external APIs (search, docs, RAG)
+* Audit logging is handled asynchronously through a queue and worker
+
+This design enables:
+
+* Scalability through service isolation
+* Low latency via asynchronous execution
+* Observability through audit logging
+
+The system is structured into three logical layers:
+
+Retrieval Layer::
+* Documentation search (Elastic backend)
+* Document retrieval by URL
+
+Reasoning Layer::
+* RAG-based synthesis (Azure Cognitive Search + OpenAI)
+
+Observability Layer::
+* Asynchronous audit logging
+* MongoDB persistence
+* Non-blocking execution
+
+== Audit logging
+
+Audit logs are captured for all tool executions:
+
+* Asynchronous (non-blocking)
+* Buffered via in-memory queue
+* Written to MongoDB by a background worker
+
+.Example record:
+
+[source,json]
+----
+{
+  "_id": {
+    "$oid": "6a15ef9c930a3d0cf61b458a"
+  },
+  "mcp_session_id": "e06acc73-f15f-42b3-9ef8-56d76fa36e3c",
+  "tool": "netapp_docs_search",
+  "status": "success",
+  "args": {
+    "query": "ontap upgrade paths",
+    "size": "5"
+  },
+  "duration": 0.807,
+  "user_agent": "PostmanClient/12.11.2 (AppId=8afc97b9-8beb-476e-8c8e-29bfaa4e05b5)",
+  "client_ip": "127.0.0.1",
+  "timestamp": "2026-05-26T19:08:11.935Z",
+  "api_subscription_key": "NetApp-MCP-Internal-VPN-Users",
+  "language": "en"
+}
+----
+
 == Requirements
 
 * Requests pass through NetApp API Management (APIM) for security, throttling, and request validation. External access requires an APIM subscription key.
