@@ -211,9 +211,7 @@ After you've configured the MCP server, you can interact with NetApp technical d
 .Steps
 
 . Open Copilot Chat or your preferred MCP-compatible client.
-. Select agent mode.
 . Ask a clear question about NetApp products or procedures.
-. Allow the agent to use the MCP server.
 . Review the grounded response.
 
 .Related information
