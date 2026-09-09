@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: learn-mcp-server.html
+permalink: mcp-server-learn.html
 keywords: 
 summary: 
 ---

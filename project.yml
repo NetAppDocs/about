@@ -19,9 +19,9 @@ sidebar:
   - title:  About the docs.netapp.com MCP server
     entries:
     - title: Learn 
-      url:  /learn-mcp-server.html
+      url:  /mcp-server-learn.html
     - title: Get started 
-      url: /get-started-mcp-server.html
+      url: /mcp-server-get-started.html
     - title: Developer reference
       url: /mcp-developer-reference.html
      

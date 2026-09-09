@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: get-started-mcp-server.html
+permalink: mcp-server-get-started.html
 keywords: 
 summary: 
 ---
@@ -12,14 +12,14 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-Get started by connecting your AI development environment, such as Visual Studio Code with GitHub Copilot, Claude Desktop, or custom Python agents, to the docs.netapp.com Model Context Protocol (MCP) server. 
+Connect your AI development environment, such as Visual Studio Code with GitHub Copilot, Claude Desktop, or custom Python agents, to the docs.netapp.com Model Context Protocol (MCP) server. After you've configured the MCP server, use it to return grounded answers from published NetApp documentation.
 
 == Prerequisites
 
 Before configuring the docs.netapp.com MCP server, verify the following:
 
-* You have reviewed the information in link:learn-mcp-server.html[Learn about the docs.netapp.com MCP server].
-* Visual Studio Code is installed with the GitHub Copilot extension enabled.
+* You have reviewed the requirements and limitations in link:learn-mcp-server.html[Learn about the docs.netapp.com MCP server].
+* You have access to a supported MCP-compliant client such as Visual Studio Code with GitHub Copilot, Claude Desktop, or Python-based agent frameworks.
 * If you require external client access, you must have an active *NetApp APIM subscription key*. To request a key, contact the IE development team.
 * You have network access to the docs.netapp.com MCP endpoint: `\https://docs-stage.netapp.com/mcp`.
 
@@ -36,6 +36,10 @@ Choose the setup option for your environment.
 === Visual Studio Code setup
 
 You can connect to the MCP server from Visual Studio Code using GitHub Copilot by configuring an `mcp.json` file.
+
+.Before you begin
+
+* This task requires Visual Studio Code with the GitHub Copilot extension enabled.
 
 .Steps
 
@@ -87,6 +91,7 @@ Use this option when you want to connect to a local MCP service.
 .External access (non-VPN users)
 --
 Use this option when you need to connect from outside the NetApp corporate network.  
+
 NOTE: This option requires an API subscription key. If you do not already have a key, contact the IE development team to request access.
 
 [source,json]
@@ -204,8 +209,6 @@ After you've configured the MCP server, you can interact with NetApp technical d
 * Responses are always grounded in official NetApp documentation.
 
 .Steps
-
-Once the client is configured, open your chat interface, switch to agent mode, and ask a question about NetApp documentation.
 
 . Open Copilot Chat or your preferred MCP-compatible client.
 . Select agent mode.
