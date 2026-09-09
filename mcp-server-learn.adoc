@@ -25,7 +25,7 @@ By providing structured access to NetApp documentation, the docs.netapp.com MCP 
 
 You can use the docs.netapp.com MCP server to:
 
-* Enhance agentic development environments such as Visual Studio Code, GitHub Copilot, Claude Desktop, and custom agents with NetApp content.
+* Enhance agentic development environments such as Visual Studio Code, GitHub Copilot, Claude Desktop, and custom Python agents with NetApp content.
 * Support engineering and support workflows that need trusted documentation during active work.
 * Reduce the need to build and maintain custom search, retrieval, or RAG integrations.
 * Provide answers that are grounded in official NetApp documentation and easy to verify.
@@ -42,7 +42,9 @@ This simple exchange helps AI agents stay aligned with authoritative documentati
 
 == Requirements
 
-* Access is managed through NetApp API Management (APIM). Internal requests are authenticated through network IP filtering, and external or partner requests use an APIM subscription key.
+* Access is managed through NetApp API Management (APIM). 
+** Internal requests require access to the NetApp Corporate network.
+** External or partner requests require an APIM subscription key.
 * Supported clients include MCP-compliant environments such as Visual Studio Code with GitHub Copilot, Claude Desktop, and Python-based agent frameworks.
 * You must follow the applicable NetApp documentation terms of use and access governance policies.
 
@@ -55,5 +57,5 @@ This simple exchange helps AI agents stay aligned with authoritative documentati
 
 .What's next?
 
-* xref:get-started-mcp-server.html[Get started with the docs.netapp.com MCP Server]
+* xref:mcp-server-get-started.html[Get started with the docs.netapp.com MCP Server]
 
