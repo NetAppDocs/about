@@ -12,7 +12,7 @@ summary: Reference for developers integrating with the docs.netapp.com Model Con
 :imagesdir: ./media/
 
 [.lead]
-This article provides information for developers implementing or integrating with the docs.netapp.com Model Context Protocol (MCP) server. 
+This reference provides information for developers implementing or integrating with the docs.netapp.com Model Context Protocol (MCP) server. 
 
 == MCP endpoint
 
@@ -26,7 +26,7 @@ Use the following endpoint when connecting remotely to the server:
   "servers": {
     "netapp-docs-mcp": {
       "type": "http",
-      "url": "https://apimanagement-rg-devops.azure-api.net/netappdocs/mcp"
+      "url": "https://docs-stage.netapp.com/mcp"
     }
   }
 }

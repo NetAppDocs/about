@@ -21,7 +21,7 @@ Before configuring the docs.netapp.com MCP server, verify the following:
 * You have reviewed the information in link:learn-mcp-server.html[Learn about the docs.netapp.com MCP server].
 * Visual Studio Code is installed with the GitHub Copilot extension enabled.
 * If you require external client access, you must have an active *NetApp APIM subscription key*. To request a key, contact the IE development team.
-* You have network access to the docs.netapp.com MCP endpoint: `\https://docs-stage.netapp.com/mcp` (or production endpoint `\https://docs.netapp.com/mcp`).
+* You have network access to the docs.netapp.com MCP endpoint: `\https://docs-stage.netapp.com/mcp`.
 
 == Step 1: Configure your development environment
 
@@ -52,7 +52,7 @@ Use this option when you are on the NetApp corporate network or VPN.
   "servers": {
     "netapp-docs-mcp": {
       "type": "http",
-      "url": "https://apimanagement-rg-devops.azure-api.net/netappdocs/mcp"
+      "url": "https://docs-stage.netapp.com/mcp"
     }
   }
 }
@@ -78,7 +78,7 @@ Use this option when you want to connect to a local MCP service.
 ----
 
 --
-.External access (Non-VPN users)
+.External access (non-VPN users)
 --
 Use this option when you need to connect from outside the NetApp corporate network.  
 NOTE: This option requires an API subscription key. If you do not already have a key, contact the IE development team to request access.
@@ -89,7 +89,7 @@ NOTE: This option requires an API subscription key. If you do not already have a
   "servers": {
     "netapp-docs-mcp": {
       "type": "http",
-      "url": "https://apimanagement-rg-devops.azure-api.net/netappdocs/mcp",
+      "url": "https://docs-stage.netapp.com/mcp",
       "headers": {
         "Ocp-Apim-Subscription-Key": "${input:Ocp-Apim-Subscription-Key}"
       }
