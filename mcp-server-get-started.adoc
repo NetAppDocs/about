@@ -208,6 +208,8 @@ After you've configured the MCP server, you can interact with NetApp technical d
 * Use clear, complete questions instead of short or vague queries.
 * Responses are always grounded in official NetApp documentation.
 
+NOTE: MCP tools are independent, there is no required execution flow. However, it is recommended to start with `netapp_docs_ask` for most scenarios. This provides the fastest and most complete results.
+
 .Steps
 
 . Open Copilot Chat or your preferred MCP-compatible client.
