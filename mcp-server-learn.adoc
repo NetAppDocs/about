@@ -18,7 +18,7 @@ By providing structured access to NetApp documentation, the docs.netapp.com MCP 
 
 * Discover relevant documentation
 * Retrieve complete document content
-* Generate answers based on documentation (RAG based answer generation)
+* Generate answers based on documentation (RAG-based answer generation)
 * Produce grounded, verifiable responses
 
 == Use cases
@@ -26,9 +26,9 @@ By providing structured access to NetApp documentation, the docs.netapp.com MCP 
 You can use the docs.netapp.com MCP server to:
 
 * Enhance agentic development environments such as Visual Studio Code, GitHub Copilot, Claude Desktop, and custom Python agents with NetApp content.
-* Support engineering and support workflows that need trusted documentation during active work.
+* Support engineering and support workflows that need trusted documentation.
 * Reduce the need to build and maintain custom search, retrieval, or RAG integrations.
-* Provide answers that are grounded in official NetApp documentation and easy to verify.
+* Provide answers that are grounded in official NetApp documentation.
 
 == How the docs.netapp.com MCP server works
 
