@@ -25,97 +25,35 @@ By providing structured access to NetApp documentation, the docs.netapp.com MCP 
 
 You can use the docs.netapp.com MCP server to:
 
-* Ask natural language questions about NetApp products
-
-* Get answers grounded in official documentation
-
-* Avoid building custom search or RAG pipelines
-
-* Ensure responses are accurate and verifiable
-
-The following table shows the three primary tools provided by the docs.netapp.com MCP server and recommended use cases.
-
-[cols="1,3, options="header"]
-|===
-| Tool name | Use case 
-
-a| `netapp_docs_ask` (recommended default)
-
-a|  Generates synthesized, documentation-grounded answers using RAG. Use this for most scenarios.
-
-Best used for:
-
-* How-to questions
-* Conceptual explanations
-* Troubleshooting
-* Comparisons
-* Combining information across multiple documents
-
-a| `netapp_docs_search`
-
-a| Searches NetApp documentation and return relevant pages. Discovers relevant documentation using keyword and natural language queries. 
-
-Best used for:
-
-* Keyword-based queries
-* Exploring available content
-* Finding relevant documentation pages
-* Example queries (Keyword Style)
-* Product or feature discovery
-
-a| `netapp_docs_fetch`
-a| Used to extract steps, explanations, and details. Use this tool when you have already identified the document and need detailed content.
-
-Best used for:
-
-* Extracting step-by-step procedures
-* Reading full documentation
-* Deep technical details
-
-*Note:* `netapp_docs_fetch` is typically used after `netapp_docs_search` when you want to inspect a specific document.
-
-|===
+* Enhance agentic development environments such as Visual Studio Code, GitHub Copilot, Claude Desktop, and custom agents with NetApp content.
+* Support engineering and support workflows that need trusted documentation during active work.
+* Reduce the need to build and maintain custom search, retrieval, or RAG integrations.
+* Provide answers that are grounded in official NetApp documentation and easy to verify.
 
 == How the docs.netapp.com MCP server works
 
-AI agents interact with the MCP server to retrieve and return grounded responses from official NetApp documentation. 
+The MCP server acts as an interface to official NetApp documentation and returns grounded answers from published content.
 
-* The AI agent sends a request to the MCP server
-* The MCP server retrieves relevant documentation
-* The system returns a structured, grounded response
+* The AI agent sends a request to the MCP server.
+* The MCP server retrieves relevant documentation.
+* The system returns a structured, grounded response.
 
-AI agents use the following deterministic workflow when interacting with the server:
-
-. Use netapp_docs_search to locate relevant documentation.
-. Select the most relevant results.
-. Use netapp_docs_fetch to retrieve full document content.
-. Extract steps, explanations, or key details.
-. Optionally use netapp_docs_ask to synthesize answers across documents.
-
-This ensures that responses are grounded in authoritative documentation, AI hallucinations are minimized, and answers are structured and accurate.
+This simple exchange helps AI agents stay aligned with authoritative documentation while keeping the interaction model predictable.
 
 == Requirements
 
-* Requests pass through NetApp API Management (APIM) for security, throttling, and request validation. External access requires an APIM subscription key.
-
-* Requires an MCP-compatible client such as GitHub Copilot in Visual Studio Code, Claude Desktop, Cursor, and Python scripts.
-
-* Requires standard MCP configuration in a mcp.json file pointing to the HTTP endpoint (e.g., https://docs-stage.netapp.com/mcp).
+* Access is managed through NetApp API Management (APIM). Internal requests are authenticated through network IP filtering, and external or partner requests use an APIM subscription key.
+* Supported clients include MCP-compliant environments such as Visual Studio Code with GitHub Copilot, Claude Desktop, and Python-based agent frameworks.
+* Users must follow the applicable NetApp documentation terms of use and access governance policies.
 
 == Limitations
 
-* The MCP server does not manage or replace underlying embedding models, vector stores, search indexes, or core RAG services.
-
-* netapp_docs_search only returns search results, summaries, and URL. It does not fetch or synthesize full page content. Complete synthesized answers require netapp_docs_ask, while full page extraction requires netapp_docs_fetch.
-
-* Total response latency is directly constrained by backend Doc RAG and Elastic search service performance, as the MCP layer itself introduces minimal processing overhead.
-
-* Response quality depends on how individual AI client agents handle tool calls. For instance, if an IDE agent calls netapp_docs_search without following up with netapp_docs_fetch or calling netapp_docs_ask, it will return links rather than inline synthesized text.
-
-* Guidance is grounded solely in published NetApp product documentation; it does not automatically inspect or incorporate real-time environment-specific metrics (such as Active IQ / AIQ cluster telemetry) unless orchestrated alongside other tools.
-
-* Changes to global client configurations (mcp.json) require a full restart of the client IDE (e.g., VS Code) before new settings or keys take effect.
+* The MCP server queries publicly published NetApp technical documentation. It does not access private tenant data or internal user profile information.
+* Content is limited to published documentation and does not replace product telemetry, cluster state, or other environment-specific data sources.
+* Response quality depends on how the client agent uses the available tools and follows up on search results.
+* The service is deployed statelessly on scalable cloud infrastructure, so latency and freshness depend on the downstream documentation and RAG services.
 
 .What's next?
 
 * xref:mcp-get-started.adoc[Get started with the NetApp Docs MCP Server]
+
