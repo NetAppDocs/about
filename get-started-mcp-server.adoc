@@ -23,9 +23,15 @@ Before configuring the docs.netapp.com MCP server, verify the following:
 * If you require external client access, you must have an active *NetApp APIM subscription key*. To request a key, contact the IE development team.
 * You have network access to the docs.netapp.com MCP endpoint: `\https://docs-stage.netapp.com/mcp`.
 
-== Step 1: Configure your development environment
+== Configure your development environment
 
 Choose the setup option for your environment.
+
+* <<Visual Studio Code setup>>
+* <<Python AI agent integration>>
+* <<Claude Desktop configuration>>
+
+
 
 === Visual Studio Code setup
 

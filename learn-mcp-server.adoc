@@ -55,5 +55,5 @@ This simple exchange helps AI agents stay aligned with authoritative documentati
 
 .What's next?
 
-* xref:mcp-get-started.adoc[Get started with the NetApp Docs MCP Server]
+* xref:get-started-mcp-server.html[Get started with the docs.netapp.com MCP Server]
 
