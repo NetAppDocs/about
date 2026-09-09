@@ -44,15 +44,9 @@ The server currently provides the following tools:
 * `netapp_docs_fetch`: Retrieves the structured content of a specific documentation page or article.
 * `health_check`: Validates MCP server availability.
 
-The following table provides an overview of the three primary tools used to return grounded answers from published NetApp documentation.
+=== netapp_docs_ask (recommended default)
 
-[cols="1,3, options="header"]
-|===
-| Tool name | Use
-
-a| `netapp_docs_ask` (recommended default)
-
-a|  Generates synthesized, documentation-grounded answers using RAG. Use this for most scenarios.
+Generates complete, synthesized answers using RAG that are grounded in official documentation with reference citations. 
 
 Best used for:
 
@@ -60,35 +54,6 @@ Best used for:
 * Conceptual explanations
 * Troubleshooting
 * Comparisons
-* Combining information across multiple documents
-
-a| `netapp_docs_search`
-
-a| Searches NetApp documentation and return relevant pages. Discovers relevant documentation using keyword and natural language queries. 
-
-Best used for:
-
-* Keyword-based queries
-* Exploring available content
-* Finding relevant documentation pages
-* Example queries (Keyword Style)
-* Product or feature discovery
-
-a| `netapp_docs_fetch`
-a| Used to extract steps, explanations, and details. Use this tool when you have already identified the document and need detailed content.
-
-Best used for:
-
-* Extracting step-by-step procedures
-* Reading full documentation
-* Deep technical details
-
-|===
-
-
-=== netapp_docs_ask (recommended default)
-
-Generates complete, synthesized answers grounded in official documentation with reference citations. Use this for how-to questions, troubleshooting, conceptual explanations, and comparison.
 
 Example configuration and how-to questions::
 * _How do I configure SnapMirror replication between two ONTAP clusters?_
@@ -115,7 +80,15 @@ Example comparison questions::
 * _AFF vs FAS — which one should I use and when?_
 
 === netapp_docs_search
-Discovers relevant documentation articles based on keyword queries. Use this during early research or topic discovery.
+Discovers relevant documentation using keyword and natural language queries. Use this during early research or topic discovery.
+
+Best used for:
+
+* Keyword-based queries
+* Exploring available content
+* Finding relevant documentation pages
+* Example queries (Keyword Style)
+* Product or feature discovery
 
 NOTE:  Use short keyword-style queries with `netapp_docs_search`. For complete answers, switch to `netapp_docs_ask`.
 
@@ -153,7 +126,13 @@ Example keyword-style queries for concepts and features::
 === netapp_docs_fetch
 Retrieves full, structured content for a specific article URL returned by search. Use when step-by-step procedures or exhaustive technical details are required.
 
-NOTE: `netapp_docs_fetch` is typically used after `netapp_docs_search` when you want to inspect a specific document.
+Best used for:
+
+* Extracting step-by-step procedures
+* Reading full documentation
+* Deep technical details
+
+NOTE: `netapp_docs_fetch` is typically used after `netapp_docs_search` when you want to inspect a specific document. Use this tool when you have already identified the document and need detailed content.
 
 
 
