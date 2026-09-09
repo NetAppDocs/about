@@ -124,7 +124,7 @@ NOTE: This option requires an API subscription key. If you do not already have a
 
 . Optionally, configure global access. 
 +
-To make the NetApp Docs MCP Server available across all Visual Studio Code projects and workspaces, add the configuration to your global user settings directory.
+To configure the docs.netapp.com MCP server across all Visual Studio Code projects and workspaces, add the configuration to your global user settings directory.
 +
 * *Windows*: `C:\Users\<your_username>\AppData\Roaming\Code\User\mcp.json`
 * *macOS*: `~/Library/Application Support/Code/User/mcp.json`
