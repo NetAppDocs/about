@@ -20,8 +20,7 @@ Before configuring the docs.netapp.com MCP server, verify the following:
 
 * You have reviewed the requirements and limitations in link:learn-mcp-server.html[Learn about the docs.netapp.com MCP server].
 * You have access to a supported MCP-compliant client such as Visual Studio Code with GitHub Copilot, Claude Desktop, or Python-based agent frameworks.
-* If you require external client access, you must have an active *NetApp APIM subscription key*. To request a key, contact the IE development team.
-* You have network access to the docs.netapp.com MCP endpoint: `\https://docs-stage.netapp.com/mcp`.
+* You have network access to the docs.netapp.com MCP endpoint: `\https://docs.netapp.com/mcp`.
 
 == Configure your development environment
 
@@ -48,59 +47,15 @@ You can connect to the MCP server from Visual Studio Code using GitHub Copilot b
 .. Create a folder named `.vscode`
 .. Create a file within the folder called `mcp.json`
 
-. Configure the `mcp.json` file depending on whether you want to configure remote, local or external access to the MCP server. 
+. Configure the `mcp.json` file.
 +
-[role="tabbed-block"]
-====
-.Remote MCP Server (Recommended)
---
-Use this option when you are on the NetApp corporate network or VPN. 
-
 [source,json]
 ----
 {
   "servers": {
     "netapp-docs-mcp": {
       "type": "http",
-      "url": "https://docs-stage.netapp.com/mcp"
-    }
-  }
-}
-----
-
-NOTE: Access to this endpoint is restricted. Ensure your device is connected to the NetApp corporate network (for example, via VPN) before attempting to connect.
-
---
-.Local MCP server
---
-Use this option when you want to connect to a local MCP service.
-
-[source,json]
-----
-{
-  "servers": {
-    "netapp-docs-mcp": {
-      "type": "http",
-      "url": "http://localhost:8000"
-    }
-  }
-}
-----
-
---
-.External access (non-VPN users)
---
-Use this option when you need to connect from outside the NetApp corporate network.  
-
-NOTE: This option requires an API subscription key. If you do not already have a key, contact the IE development team to request access.
-
-[source,json]
-----
-{
-  "servers": {
-    "netapp-docs-mcp": {
-      "type": "http",
-      "url": "https://docs-stage.netapp.com/mcp",
+      "url": "https://docs.netapp.com/mcp",
       "headers": {
         "Ocp-Apim-Subscription-Key": "${input:Ocp-Apim-Subscription-Key}"
       }
@@ -115,10 +70,11 @@ NOTE: This option requires an API subscription key. If you do not already have a
     }
   ]
 }
+
 ----
 
---
-====
+NOTE: Access to this endpoint is restricted. Ensure your device is connected to the NetApp corporate network (for example, via VPN) before attempting to connect.
+
 
 . Save the file. 
 
@@ -137,7 +93,7 @@ Add the server definition:
   "servers": {
     "netapp-docs-mcp": {
       "type": "http",
-      "url": "https://docs-stage.netapp.com/mcp"
+      "url": "https://docs.netapp.com/mcp"
     }
   }
 }
@@ -163,7 +119,7 @@ For custom AI applications or Python agent pipelines, connect directly using an 
 from mcp import MCPClient
 
 # Initialize connection to the NetApp Docs MCP Server
-client = MCPClient("https://docs-stage.netapp.com/mcp")
+client = MCPClient("https://docs.netapp.com/mcp")
 
 # Call the RAG answer tool
 response = client.call_tool("netapp_docs_ask", {
@@ -188,7 +144,7 @@ To register the docs.netapp.com MCP server with Claude Desktop, update your conf
       "command": "npx",
       "args": [
         "mcp-remote",
-        "https://docs-stage.netapp.com/mcp"
+        "https://docs.netapp.com/mcp"
       ]
     }
   }
@@ -208,11 +164,9 @@ After you've configured the MCP server, you can interact with NetApp technical d
 * Use clear, complete questions instead of short or vague queries.
 * Responses are always grounded in official NetApp documentation.
 
-NOTE: MCP tools are independent, there is no required execution flow. However, it is recommended to start with `netapp_docs_ask` for most scenarios. This provides the fastest and most complete results.
-
 .Steps
 
-. Open Copilot Chat or your preferred MCP-compatible client.
+. Open your preferred MCP-compatible client.
 . Ask a clear question about NetApp products or procedures.
 . Review the grounded response.
 
