@@ -48,12 +48,28 @@ The server currently provides the following tools:
 
 Generates complete, synthesized answers using RAG that are grounded in official documentation with reference citations. 
 
-Best used for:
+[cols="2,2" options="header"]
+|===
+// header row
+| Uses
+| Input/Output
+
+// first body row
+a|
 
 * How-to questions
 * Conceptual explanations
 * Troubleshooting
 * Comparisons
+a|
+
+*Input:* A question
+
+*Output:* A synthesized answer with references
+
+// table end
+|===
+
 
 Example configuration and how-to questions::
 * _How do I configure SnapMirror replication between two ONTAP clusters?_
@@ -82,13 +98,28 @@ Example comparison questions::
 === netapp_docs_search
 Discovers relevant documentation using keyword and natural language queries. Use this during early research or topic discovery.
 
-Best used for:
+[cols="2,2" options="header"]
+|===
+// header row
+| Uses
+| Input/Output
+
+// first body row
+a|
 
 * Keyword-based queries
-* Exploring available content
-* Finding relevant documentation pages
-* Example queries (Keyword Style)
+* Explore available content
+* Find relevant documentation pages
+* Example queries (keyword style)
 * Product or feature discovery
+a|
+
+*Input:* A natural language query
+
+*Output:* A list of documents with title, summary, and URL
+
+// table end
+|===
 
 NOTE:  Use short keyword-style queries with `netapp_docs_search`. For complete answers, switch to `netapp_docs_ask`.
 
@@ -126,11 +157,27 @@ Example keyword-style queries for concepts and features::
 === netapp_docs_fetch
 Retrieves full, structured content for a specific article URL returned by search. Use when step-by-step procedures or exhaustive technical details are required.
 
-Best used for:
+[cols="2,2" options="header"]
+|===
+// header row
+| Uses
+| Input/Output
 
-* Extracting step-by-step procedures
-* Reading full documentation
-* Deep technical details
+// first body row
+a|
+
+* Extract step-by-step procedures
+* Read full documentation
+* Retrieve deep technical details
+a|
+
+*Input:* A document URL
+
+*Output:* Structured text content (title, summary, and article)
+// table end
+|===
+
+
 
 NOTE: `netapp_docs_fetch` is typically used after `netapp_docs_search` when you want to inspect a specific document. Use this tool when you have already identified the document and need detailed content.
 

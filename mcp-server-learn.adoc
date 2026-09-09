@@ -43,7 +43,7 @@ This simple exchange helps AI agents stay aligned with authoritative documentati
 == Requirements
 
 * Access is managed through NetApp API Management (APIM). 
-** Internal requests require access to the NetApp Corporate network.
+** Internal requests require access to the NetApp corporate network.
 ** External or partner requests require an APIM subscription key.
 * Supported clients include MCP-compliant environments such as Visual Studio Code with GitHub Copilot, Claude Desktop, and Python-based agent frameworks.
 * You must follow the applicable NetApp documentation terms of use and access governance policies.
