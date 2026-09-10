@@ -12,14 +12,14 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-Connect your AI development environment, such as Visual Studio Code with GitHub Copilot, Claude Desktop, or custom Python agents, to the docs.netapp.com Model Context Protocol (MCP) server. After you've configured the MCP server, use it to return grounded answers from published NetApp documentation.
+Connect your AI development environment to the docs.netapp.com Model Context Protocol (MCP) server. After you've configured the MCP server, use it to return grounded answers from published NetApp documentation.
 
 == Prerequisites
 
 Before configuring the docs.netapp.com MCP server, verify the following:
 
 * You have reviewed the requirements and limitations in link:learn-mcp-server.html[Learn about the docs.netapp.com MCP server].
-* You have access to a supported MCP-compliant client such as Visual Studio Code with GitHub Copilot, Claude Desktop, or Python-based agent frameworks.
+* You have access to a supported MCP-compliant client such as Visual Studio Code with GitHub Copilot, Claude Desktop, Cursor, or Python-based agent frameworks.
 * You must have a valid subscription key. If you don't provide a key, MCP requests fail and return an access error. To request a subscription key, contact ng-docs-mcp@netapp.com with a brief description of your use case.
 * You have network access to the docs.netapp.com MCP endpoint: `\https://docs.netapp.com/mcp`.
 

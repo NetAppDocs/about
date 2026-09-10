@@ -12,7 +12,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-The docs.netapp.com MCP server provides a standardized, agent-ready integration layer in front of existing NetApp documentation and Retrieval-Augmented Generation (RAG) services. It allows AI agents, such as GitHub Copilot in Visual Studio Code, Claude Desktop, and custom Python AI agents, to interact with enterprise technical knowledge using natural language without requiring direct REST API integration or custom pipeline development.
+The docs.netapp.com MCP server provides a standardized, agent-ready integration layer in front of existing NetApp documentation and Retrieval-Augmented Generation (RAG) services. It allows AI agents to interact with enterprise technical knowledge using natural language without requiring direct REST API integration or custom pipeline development.
 
 By providing structured access to NetApp documentation, the docs.netapp.com MCP server enables AI agents to:
 
@@ -25,7 +25,7 @@ By providing structured access to NetApp documentation, the docs.netapp.com MCP 
 
 You can use the docs.netapp.com MCP server to:
 
-* Enhance agentic development environments such as Visual Studio Code, GitHub Copilot, Claude Desktop, and custom Python agents with NetApp content.
+* Enhance agentic development environments such as Visual Studio Code, GitHub Copilot, Claude Desktop, Curspr, and custom Python agents with NetApp content.
 * Support engineering and support workflows that need trusted documentation.
 * Reduce the need to build and maintain custom search, retrieval, or RAG integrations.
 * Provide answers that are grounded in official NetApp documentation.
@@ -43,7 +43,7 @@ This simple exchange helps AI agents stay aligned with authoritative documentati
 == Requirements
 
 * A subscription key is required to access the MCP server. To request a key, contact ng-docs-mcp@netapp.com with a brief description of your use case. 
-* Supported clients include MCP-compliant environments such as Visual Studio Code with GitHub Copilot, Claude Desktop, and Python-based agent frameworks.
+* Supported clients include MCP-compliant environments such as Visual Studio Code with GitHub Copilot, Claude Desktop, Cursor, and Python-based agent frameworks.
 * You must follow the applicable NetApp documentation terms of use and access governance policies.
 
 == Limitations
