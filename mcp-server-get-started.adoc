@@ -71,11 +71,7 @@ You can connect to the MCP server from Visual Studio Code using GitHub Copilot b
     }
   ]
 }
-
 ----
-
-NOTE: Access to this endpoint is restricted. Ensure your device is connected to the NetApp corporate network (for example, via VPN) before attempting to connect.
-
 
 . Save the file. 
 
@@ -113,21 +109,21 @@ _What are the differences between ONTAP and Cloud Volumes ONTAP?_
 
 === Python AI agent integration
 
-For custom AI applications or Python agent pipelines, connect directly using an MCP client library:
+Use this option if you are building applications or AI agents that directly call the MCP server.
+
+Your client connects to the MCP endpoint and invokes the tools.
 
 [source,python]
 ----
-from mcp import MCPClient
-
-# Initialize connection to the NetApp Docs MCP Server
-client = MCPClient("https://docs.netapp.com/mcp")
-
-# Call the RAG answer tool
+client = MCPClient("https://docs.netapp.com/mcp",
+  headers={
+          "Ocp-Apim-Subscription-Key": "<YOUR_API_KEY>"
+      }
+  )
 response = client.call_tool("netapp_docs_ask", {
-    "question": "What are the steps to perform a non-disruptive ONTAP upgrade?"
+    "question": "What are ONTAP upgrade steps?"
 })
 
-print(response)
 ----
 
 === Claude Desktop configuration
@@ -159,16 +155,14 @@ After you've configured the MCP server, you can interact with NetApp technical d
 
 .About this task
 
-* Start with `netapp_docs_ask` for most questions.
-* Use `netapp_docs_search` for keyword-based discovery.
-* Use `netapp_docs_fetch` to retrieve detailed document content.
+* The docs.netapp.com MCP server will choose an appropriate tool to provide results based on your query. 
 * Use clear, complete questions instead of short or vague queries.
 * Responses are always grounded in official NetApp documentation.
 
 .Steps
 
-. Open your preferred MCP-compatible client.
-. Ask a clear question about NetApp products or procedures.
+. Open chat on your preferred MCP-compatible client.
+. Invoke the configured MCP server and ask a clear question about NetApp products or procedures.
 . Review the grounded response.
 
 .Related information

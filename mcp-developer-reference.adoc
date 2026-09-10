@@ -26,16 +26,27 @@ Use the following endpoint when connecting remotely to the server:
   "servers": {
     "netapp-docs-mcp": {
       "type": "http",
-      "url": "https://docs.netapp.com/mcp"
+      "url": "https://docs.netapp.com/mcp",
+      "headers": {
+        "Ocp-Apim-Subscription-Key": "${input:Ocp-Apim-Subscription-Key}"
+      }
     }
-  }
+  },
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "Ocp-Apim-Subscription-Key",
+      "description": "Enter your access key",
+      "password": true
+    }
+  ]
 }
 ----
 
 
 == Tools
 
-The docs.netapp.com MCP server exposes a small, focused tool set for documentation discovery and retrieval. 
+The docs.netapp.com MCP server exposes a small, focused tool set for documentation discovery and retrieval. You do not have to specify the tool when you invoke the MCP server in your client. The server will choose the correct tool based on the query. 
 
 The server currently provides the following tools:
 
