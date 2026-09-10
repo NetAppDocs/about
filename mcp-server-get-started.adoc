@@ -171,7 +171,7 @@ To apply the configuration in a single project, use  `.cursor/mcp.json` in the p
 
 NOTE: If the file already has other servers configured, add `netapp-docs-mcp` inside the existing `mcpServers` object (make sure to add a comma after the previous entry). If there is no `mcpServers` key, add the key at the top level next to any other settings.
 
-[source.json]
+[source,json]
 ----
 {
   "mcpServers": {
