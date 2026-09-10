@@ -50,7 +50,7 @@ The following format is used to configure the MCP server using an `mcp.json` fil
 
 == Tools
 
-The docs.netapp.com MCP server exposes a small, focused tool set for documentation discovery and retrieval. You do not have to specify the tool when you invoke the MCP server in your client. The server will choose the correct tool based on the query. 
+The docs.netapp.com MCP server exposes a small, focused tool set for documentation discovery and retrieval. You do not have to specify the tool when you invoke the MCP server in your client. The server chooses the correct tool based on the query. 
 
 The server currently provides the following tools:
 
