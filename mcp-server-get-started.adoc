@@ -132,7 +132,7 @@ response = client.call_tool("netapp_docs_ask", {
 
 === Claude Desktop configuration
 
-To register the docs.netapp.com MCP server with Claude Desktop, update your configuration file:
+To register the docs.netapp.com MCP server with Claude Desktop, update the MCP configuration file:
 
 * *macOS*: `~/Library/Application Support/Claude/claude_desktop_config.json`
 * *Windows*: `%APPDATA%\Claude\claude_desktop_config.json`
@@ -160,7 +160,7 @@ To register the docs.netapp.com MCP server with Claude Desktop, update your conf
 
 === Cursor configuration
 
-To register the docs.netapp.com MCP server with Cursor you must update the MCP configuration file. 
+To register the docs.netapp.com MCP server with Cursor, update the MCP configuration file. 
 
 To apply the configuration globally, use the following paths:
 
