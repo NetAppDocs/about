@@ -90,7 +90,10 @@ Add the server definition:
   "servers": {
     "netapp-docs-mcp": {
       "type": "http",
-      "url": "https://docs.netapp.com/mcp"
+      "url": "https://docs.netapp.com/mcp",
+      "headers": {
+        "Ocp-Apim-Subscription-Key": "${input:Ocp-Apim-Subscription-Key}"
+      }
     }
   }
 }
