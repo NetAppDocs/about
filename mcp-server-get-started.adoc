@@ -30,6 +30,7 @@ Choose the setup option for your environment.
 * <<Visual Studio Code setup>>
 * <<Python AI agent integration>>
 * <<Claude Desktop configuration>>
+* <<Cursor configuration>>
 
 
 
@@ -157,6 +158,32 @@ To register the docs.netapp.com MCP server with Claude Desktop, update your conf
 }
 ----
 
+=== Cursor configuration
+
+To register the docs.netapp.com MCP server with Cursor you must update the MCP configuration file. 
+
+To apply the configuration globally, use the following paths:
+
+* *Mac OS*: `~/.cursor/mcp.json`
+* *Windows*: `%USERPROFILE%\.cursor\mcp.json`
+
+To apply the configuration in a single project, use  `.cursor/mcp.json` in the project root directory. 
+
+NOTE: If the file already has other servers configured, add `netapp-docs-mcp` inside the existing `mcpServers` object ( adding a comma after the previous entry). If there is no `mcpServers` key, add the key at the top level next to any other settings.
+
+[source.json]
+----
+{
+  "mcpServers": {
+    "netapp-docs-mcp": {
+      "url": "https://docs.netapp.com/mcp",
+      "headers": {
+        "Ocp-Apim-Subscription-Key": "paste-your-subscription-key-here"
+      }
+    }
+  }
+}
+----
 
 ==  Use the docs.netapp.com MCP server
 

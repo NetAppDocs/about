@@ -22,7 +22,7 @@ The docs.netapp.com MCP server has a remote HTTP endpoint that exposes NetApp do
 
 `\https://docs.netapp.com/mcp`
 
-The following format is used to configure the MCP server using an `mcp.json` file.
+The following example format is used to configure the MCP server using an `mcp.json` file in Visual Studio Code. For information on other supported MCP clients, refer to link:mcp-server-get-started.html[Get started with the docs.netapp.com MCP server].
 
 [source,json]
 ----
