@@ -99,7 +99,7 @@ Add the server definition:
 }
 ----
 +
-NOTE: Restart Visual Studio Code after modifying global `mcp.json` files for the configuration to take effect.
+NOTE: After you modify the global `mcp.json` file, restart Visual Studio Code to apply the configuration.
 
 . Verify the configuration.
 .. Open Visual Studio Code in your workspace.
