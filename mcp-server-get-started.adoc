@@ -140,9 +140,15 @@ To register the docs.netapp.com MCP server with Claude Desktop, update your conf
     "netapp-docs-mcp": {
       "command": "npx",
       "args": [
+        "-y",
         "mcp-remote",
-        "https://docs.netapp.com/mcp"
-      ]
+        "https://docs.netapp.com/mcp",
+        "--header",
+        "Ocp-Apim-Subscription-Key:${NETAPP_MCP_KEY}"
+      ],
+      "env": {
+        "NETAPP_MCP_KEY": "paste-your-subscription-key-here"
+      }
     }
   }
 }
