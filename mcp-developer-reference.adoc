@@ -18,7 +18,11 @@ This reference provides information for developers implementing or integrating w
 
 The docs.netapp.com MCP server has a remote HTTP endpoint that exposes NetApp documentation through a standard MCP interface. Client applications such as GitHub Copilot in Visual Studio Code, Claude Desktop, and custom Python agent frameworks can connect to it through a supported MCP client.
 
-Use the following endpoint when connecting remotely to the server:
+.HTTP endpoint
+
+`\https://docs.netapp.com/mcp`
+
+The following format is used to configure the MCP server using an `mcp.json` file.
 
 [source,json]
 ----
