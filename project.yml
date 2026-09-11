@@ -16,7 +16,7 @@ sidebar:
         url: /doc-gen-ai-assistant.html
       - title: Terms of use
         url: /doc-gen-ai-assistant-terms-of-use.html 
-  - title:  About the docs.netapp.com MCP server
+  - title:  docs.netapp.com MCP server
     entries:
     - title: Learn 
       url:  /mcp-server-learn.html
