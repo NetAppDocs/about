@@ -12,7 +12,9 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-The docs.netapp.com MCP server provides a standardized, agent-ready integration layer in front of existing NetApp documentation and Retrieval-Augmented Generation (RAG) services. It allows AI agents to interact with enterprise technical knowledge using natural language without requiring direct REST API integration or custom pipeline development.
+The docs.netapp.com Model Context Protocol (MCP) server provides a standardized, agent-ready integration layer in front of existing NetApp documentation and Retrieval-Augmented Generation (RAG) services. It allows AI agents to interact with enterprise technical knowledge using natural language without requiring direct REST API integration or custom pipeline development.
+
+== Use cases
 
 By providing structured access to NetApp documentation, the docs.netapp.com MCP server enables AI agents to:
 
@@ -21,11 +23,9 @@ By providing structured access to NetApp documentation, the docs.netapp.com MCP 
 * Generate answers based on documentation (RAG-based answer generation)
 * Produce grounded, verifiable responses
 
-== Use cases
-
 You can use the docs.netapp.com MCP server to:
 
-* Enhance agentic development environments such as Visual Studio Code, GitHub Copilot, Claude Desktop, Cursor, and custom Python agents with NetApp content.
+* Enhance agentic development environments with NetApp content.
 * Support engineering and support workflows that need trusted documentation.
 * Reduce the need to build and maintain custom search, retrieval, or RAG integrations.
 * Provide answers that are grounded in official NetApp documentation.
@@ -34,11 +34,10 @@ You can use the docs.netapp.com MCP server to:
 
 The MCP server acts as an interface to official NetApp documentation and returns grounded answers from published content.
 
-* The AI agent sends a request to the MCP server.
-* The MCP server retrieves relevant documentation.
-* The system returns a structured, grounded response.
+. The AI agent sends a request to the MCP server.
+. The MCP server retrieves relevant documentation.
+. The system returns a structured, grounded response.
 
-This simple exchange helps AI agents stay aligned with authoritative documentation while keeping the interaction model predictable.
 
 == Requirements
 
@@ -48,9 +47,9 @@ This simple exchange helps AI agents stay aligned with authoritative documentati
 
 == Limitations
 
-* The MCP server queries publicly published NetApp technical documentation. It does not access private tenant data or internal user profile information.
+* The MCP server queries content published to docs.netapp.com. It does not access private tenant data or internal user profile information.
 * Content is limited to published documentation and does not replace product telemetry, cluster state, or other environment-specific data sources.
-* Response quality depends on how the client agent uses the available tools and follows up on search results.
+* Response quality can be impacted by how the client agent uses the available tools and follows up on search results.
 * The service is deployed statelessly on scalable cloud infrastructure, so latency and freshness depend on the downstream documentation and RAG services.
 
 .What's next?
