@@ -68,7 +68,7 @@ The following table shows common authentication errors that can be returned by t
 |Error |Description
 
 |`MISSING_API_KEY`
-|No APIM subscription key was provided.
+|No subscription key was provided.
 
 |`INVALID_API_KEY`
 |The provided subscription key is invalid or not authorized.
