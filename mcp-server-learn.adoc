@@ -1,0 +1,58 @@
+---
+sidebar: sidebar
+permalink: mcp-server-learn.html
+keywords: 
+summary: 
+---
+= Learn about the docs.netapp.com MCP server
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The docs.netapp.com Model Context Protocol (MCP) server provides a standardized, agent-ready integration layer in front of existing NetApp documentation and Retrieval-Augmented Generation (RAG) services. It allows AI agents to interact with enterprise technical knowledge using natural language without requiring direct REST API integration or custom pipeline development.
+
+== Use cases
+
+By providing structured access to NetApp documentation, the docs.netapp.com MCP server enables AI agents to:
+
+* Discover relevant documentation
+* Retrieve complete document content
+* Generate answers based on documentation (RAG-based answer generation)
+* Produce grounded, verifiable responses
+
+You can use the docs.netapp.com MCP server to:
+
+* Enhance agentic development environments with NetApp content.
+* Support engineering and support workflows that need trusted documentation.
+* Reduce the need to build and maintain custom search, retrieval, or RAG integrations.
+* Provide answers that are grounded in official NetApp documentation.
+
+== How the docs.netapp.com MCP server works
+
+The MCP server acts as an interface to official NetApp documentation and returns grounded answers from published content.
+
+. The AI agent sends a request to the MCP server.
+. The MCP server retrieves relevant documentation.
+. The system returns a structured, grounded response.
+
+
+== Requirements
+
+* A subscription key is required to access the MCP server. To request a key, contact ng-docs-mcp@netapp.com with a brief description of your use case. 
+* Supported clients include MCP-compliant environments such as Visual Studio Code with GitHub Copilot, Claude Desktop, Cursor, and Python-based agent frameworks.
+* You must follow the applicable NetApp documentation terms of use and access governance policies.
+
+== Limitations
+
+* The MCP server queries content published to docs.netapp.com. It does not access private tenant data or internal user profile information.
+* Content is limited to content published to docs.netapp.com and does not replace product telemetry, cluster state, or other environment-specific data sources.
+* Response quality can be impacted by how the client agent uses the available tools and follows up on search results.
+* The service is deployed statelessly on scalable cloud infrastructure, so latency and freshness depend on the downstream documentation and RAG services.
+
+.What's next?
+
+xref:mcp-server-get-started.html[Get started with the docs.netapp.com MCP server]
+
