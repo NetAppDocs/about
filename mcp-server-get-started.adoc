@@ -96,7 +96,15 @@ Add the server definition:
         "Ocp-Apim-Subscription-Key": "${input:Ocp-Apim-Subscription-Key}"
       }
     }
-  }
+  },
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "Ocp-Apim-Subscription-Key",
+      "description": "Enter your access key",
+      "password": true
+    }
+  ]
 }
 ----
 +
