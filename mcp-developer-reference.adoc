@@ -58,3 +58,18 @@ The server currently provides the following tools:
 * `netapp_docs_search`: Discovers relevant NetApp documentation pages using keyword and natural-language queries.
 * `netapp_docs_fetch`: Retrieves the structured content of a specific documentation page or article.
 * `health_check`: Validates MCP server availability.
+
+== Errors
+
+The following table shows common authentication errors that can be returned by the docs.netapp.com MCP server.
+
+[cols="1,3"]
+|===
+|Error |Description
+
+|`MISSING_API_KEY`
+|No subscription key was provided.
+
+|`INVALID_API_KEY`
+|The provided subscription key is invalid or not authorized.
+|===
