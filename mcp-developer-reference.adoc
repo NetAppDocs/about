@@ -48,6 +48,22 @@ The following example format is used to configure the MCP server using an `mcp.j
 ----
 
 
+== Errors
+
+The following table shows common authentication errors that can be returned by the docs.netapp.com MCP server.
+
+[cols="1,3"]
+|===
+|Error |Description
+
+|`MISSING_API_KEY`
+|No APIM subscription key was provided.
+
+|`INVALID_API_KEY`
+|The provided subscription key is invalid or not authorized.
+|===
+
+
 == Tools
 
 The docs.netapp.com MCP server provides a small, focused tool set for documentation discovery and retrieval. You do not have to specify a tool when you invoke the MCP server in your client. The server chooses the correct tool based on the query. 
