@@ -191,7 +191,7 @@ After you've configured the MCP server, you can interact with NetApp technical d
 
 .About this task
 
-* The docs.netapp.com MCP server chooses an appropriate tool to provide results based on your query. 
+* The AI client chooses an appropriate tool to provide results based on your query. 
 * Use clear, complete questions instead of short or vague queries.
 * Responses are always grounded in official NetApp documentation.
 
