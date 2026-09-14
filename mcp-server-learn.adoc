@@ -48,7 +48,7 @@ The MCP server acts as an interface to official NetApp documentation and returns
 == Limitations
 
 * The MCP server queries content published to docs.netapp.com. It does not access private tenant data or internal user profile information.
-* Content is limited to content published to docs.netapp.com  and does not replace product telemetry, cluster state, or other environment-specific data sources.
+* Content is limited to content published to docs.netapp.com and does not replace product telemetry, cluster state, or other environment-specific data sources.
 * Response quality can be impacted by how the client agent uses the available tools and follows up on search results.
 * The service is deployed statelessly on scalable cloud infrastructure, so latency and freshness depend on the downstream documentation and RAG services.
 
