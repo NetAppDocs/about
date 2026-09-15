@@ -18,10 +18,10 @@ The docs.netapp.com Model Context Protocol (MCP) server provides a standardized,
 
 By providing structured access to NetApp documentation, the docs.netapp.com MCP server enables AI agents to:
 
-* Discover relevant documentation
-* Retrieve complete document content
-* Generate answers based on documentation (RAG-based answer generation)
-* Produce verifiable responses
+* Discover relevant documentation.
+* Retrieve complete document content.
+* Generate answers based on documentation (RAG-based answer generation).
+* Produce verifiable responses.
 
 You can use the docs.netapp.com MCP server to:
 
